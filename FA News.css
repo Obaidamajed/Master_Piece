@@ -1,0 +1,117 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#header{
+  width: 100%;
+  height: 45em;
+  background-image: url('images/Headerfootball.jpg');
+  background-size: cover;
+  position: relative;
+}
+div ul li{
+  margin: 0 15px;
+}
+.unique{
+  margin: 0;
+  transition: 0.5s;
+}
+.unique:hover{
+  transform: scale(1.3);
+}
+div ul li a b:hover{
+  background: #00004f;
+  color: #9C4B00;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+div ul li a b{
+  transition: 0.5s;
+  transition-timing-function:ease;
+}
+div ul{
+  margin:auto;
+}
+#header-paragraph{
+  position: absolute;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  color:#9C4B00;
+}
+#container{
+  background: #00004f;
+}
+#News-Core{
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+}
+#box1, #box3, #box4, #box5{
+  display: flex;
+  justify-content: space-around;
+  background: #00006D;
+  border-radius: 20px;
+  max-width: 100%;
+}
+#box1 #box1-img, #box1 #box1-paragraph, #box3 #box3-img, #box3 #box4-paragraph, #box4 #box4-img, #box4 #box4-paragraph, #box5 #box5-img, #box5 #box5-paragraph{
+  margin: 20px;
+}
+#box2{
+  background-color: #00006D;
+  border-radius: 20px;
+  width: 100%;
+}
+#box2 p{
+  margin: 0 20px;
+}
+#footer{
+  background: #9C4B00;
+  padding-bottom: 1px;
+
+}
+#logo-up{
+  margin: 0 auto;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+#logo-down{
+  margin: 0 auto;
+  width: 15%;
+  display: flex;
+  justify-content: space-around;
+}
+@media  screen and (max-width:767px){
+  #box1, #box3, #box4, #box5{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: #00006D;
+    border-radius: 20px;
+    max-width: 100%;
+  }
+  
+}
+@media  screen and (max-width:302px){
+  #box1-img img,#box3-img img,#box4-img img,#box5-img img{
+    min-width: 200px;
+    min-height: 200px;
+    margin-left: -7px;
+  }
+}
+/* @media  screen and (min-width:302px) and (max-width:540){
+  #box1-img img,#box3-img img,#box4-img img,#box5-img img{
+    min-width: 400px;
+    min-height: 300px;
+  }
+} */
+
+/* *** FA NEWS ARABIC *** */
+.News-Core-Arabic{
+  direction: rtl;
+}
+
