@@ -1,6 +1,6 @@
 <!-- Database Connection  -->
-<?php include('db.php'); ?>
-<?php include('validation.php'); ?>
+<?php include('Includes/db.php'); ?>
+<?php include('Includes/validation.php'); ?>
 
 <!-- HTML  -->
 <!DOCTYPE html>
@@ -74,7 +74,7 @@
                         while($row = mysqli_fetch_assoc($result)):
                         
                             if($email == $row['Email'] && $password == $row['Password'] && $row['Is_Admin']){
-                                header("Location: index.php");
+                                header("Location: Admins.php");
                             }
                         else if($email == $row['Email'] && $password == $row['Password']){
                             header("Location: ../PublicDashboard/Home.php");

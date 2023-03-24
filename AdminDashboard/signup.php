@@ -1,6 +1,6 @@
 <!-- Database Connection  -->
-<?php include('db.php'); ?>
-<?php include('validation.php'); ?>
+<?php include('Includes/db.php'); ?>
+<?php include('Includes/validation.php'); ?>
 
 <!-- HTML  -->
 <!DOCTYPE html>
@@ -162,7 +162,7 @@
                             <label for="floatingText">Your Photo</label>
                         </div>
                         <button type="submit" name="submit" class="btn btn-primary py-3 w-100 mb-4">Sign Up</button>
-                        <p class="text-center mb-0">Already have an Account? <a href="">Sign In</a></p>
+                        <p class="text-center mb-0">Already have an Account? <a href="signin.php">Sign In</a></p>
                     </form>
 
                 </div>

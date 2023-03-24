@@ -1,3 +1,5 @@
+<?php include('../AdminDashboard/Includes/db.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,49 +54,31 @@
       
     </div>
 
-  <div id="container">
-    <br><br>
+    <?php  
+      // Read From DataBase
+      $sql = "SELECT * FROM `coaches` ";
+      $result = mysqli_query($conn,$sql); // بقلو جملة الكويري طبقها على الداتا بايس المتصل فيها 
+      // $conn موجود في ملف ال db.php 
+    ?>
+
+
+<div id="container">
+  <br><br>
     <div id="coaches-core">
-      <div>
-        <img width="90%" height="70%" src="images/Coaches/Obaida.png" alt="Obaida">
-        <br><br>
-        <h4 >Obaida Majed</h4>
-        <p>U 15 Coach</p>
-      </div>
-      <div>
-        <img  width="90%" height="70%" src="images/Coaches/Alex_Ferguson.png" alt="Alex_Ferguson">
-        <br><br>
-        <h4>Alex Ferguson</h4>
-        <p>U 13 coach</p>
-      </div>
-      <div>
-        <img  width="90%" height="70%" src="images/Coaches/Coman.png" alt="Coman">
-        <br><br>
-        <h4>Ronald coman</h4>
-        <p>U 11 Coach</p>
-      </div>
-      <div>
-        <img  width="90%" height="70%" src="images/Coaches/Finger.png" alt="Finger">
-        <br><br>
-        <h4>Arsen Finger</h4>
-        <p>U 9 Coach</p>
-      </div>
-      <div>
-        <img  width="90%" height="70%" src="images/Coaches/Guardiolla.png" alt="Guardiolla">
-        <br><br>
-        <h4>Pep Guardiola</h4>
-        <p>U 7 Coach</p>
-      </div>
-      <div>
-        <img  width="90%" height="70%" src="images/Coaches/Hodson.png" alt="Hodson">
-        <br><br>
-        <h4>Roy hodson</h4>
-        <p>girls Coach</p>
-      </div>
+      <?php if(mysqli_num_rows($result) > 0): ?> 
+      <?php while($row = mysqli_fetch_assoc($result)): ?>
+        <div>
+            <img width="90%" height="70%" src="../AdminDashboard/Coaches/Coache's_Image/<?php echo $row['Photo']; ?>" alt="Obaida">
+            <br><br>
+            <h4 ><?php echo $row['Name']; ?></h4>
+            <p><?php echo $row['Category']; ?></p>
+        </div>
+      <?php endwhile; ?>
+      <?php endif; ?>
       <br>
     </div>
-    <br><br>
-  </div>
+  <br><br>
+</div>
 
   <!-- Footer  -->
   <div id="footer">

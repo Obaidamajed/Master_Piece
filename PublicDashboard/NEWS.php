@@ -1,3 +1,5 @@
+<?php include('../AdminDashboard/Includes/db.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,92 +55,36 @@
     <!-- Container  -->
   <div id="container">
 
-    <div id="News-Core">
+      <?php  
+        // Read From DataBase
+        $sql = "SELECT * FROM `news` ";
+        $result = mysqli_query($conn,$sql); 
+      ?>
+
+      <div id="News-Core">
       <br>
-      <div id="box1">
-        <div id="box1-img">
-          <img width="200px" height="200px" src="images/FA NEWS/News-Box1.png" alt="Game Football">
-        </div>
-        <div id="box1-paragraph">
-          <p>
-            <h4><b>It is with great pride that we announce our program</b>
-            </h4><br>
-            We have developed an advanced and high-level
-            football education program for young football
-            players in cooperation with our partner clubs:
-            Al-Faisaly and Shabab Aqaba.
-          </p>
-        </div>
-      </div>
-      <br>
-      <div id="box2">
+        <?php if(mysqli_num_rows($result) > 0): ?> 
+          <?php while($row = mysqli_fetch_assoc($result)): ?>
+              <br>
+              <div id="box1">
+                <?php if($row['Photo']) { ?>
+                <div id="box1-img">
+                  <img width="200px" height="200px" src="../AdminDashboard/News/News's_Image/<?php echo $row['Photo']; ?>" alt="<?php echo $row['Photo']; ?>">
+                </div>
+                <?php } ?>
+                <div id="box1-paragraph">
+                  <p>
+                    <h4><b><?php echo $row['Main_title']; ?></b>
+                    </h4><br>
+                    <?php echo $row['Description']; ?>
+                  </p>
+                </div>
+              </div>
+              <br>
+          <?php endwhile; ?>
+        <?php endif; ?>
         <br>
-        <h4><b>Aqaba Shabab Club ranked fifth as the best football
-          training center in Jordan</b>
-        </h4><br>
-        <p>
-          The club got a 3-star rating, and it came among the top football
-          clubs in Jordan, such as: Al-Faisali of Jordan, Al-Wehdat of Jordan,
-          Shabab Al-Jordan. It also issues the list of historical clubs at the
-          Shabab training level.
-        </p>
-        <br>
       </div>
-      <br>
-      <div id="box3">
-        <div id="box3-img">
-          <img width="200px" height="200px" src="images/FA NEWS/News-Box3.png" alt="Al-Faisaly">
-        </div>
-        <div id="box3-paragraph">
-          <p>
-            <h4><b>New partner for the Future Academy</b>
-            </h4><br>
-            The Future Academy is proud of the new cooperation
-            with Al-Faisaly Club in Jordan; Due to his distinction
-            and impressive superiority on both levels:
-            athletic and social.
-          </p>
-        </div>
-      </div>
-      <br>
-      <div id="box4">
-        <div id="box4-img">
-          <img width="200px" height="200px" src="images/FA NEWS/News-Box4.png" alt="Al-Faisaly">
-        </div>
-        <div id="box4-paragraph">
-          <p>
-            <h4><b>We invite all talented players to come to
-              the test days</b>
-            </h4><br>
-            We invite all talented players to come to the test days
-            to play with us in the official Jordanian youth football
-            league on the 8th and 9th of May at the Aqaba
-            Development Stadium.
-          </p>
-        </div>
-      </div>
-      <br>
-      <div id="box5">
-        <div id="box5-img">
-          <img width="200px" height="200px" src="images/FA NEWS/News-Box5.png" alt="Al-Faisaly">
-        </div>
-        <div id="box5-paragraph">
-          <p>
-            <h4><b>More information about Future Academy</b>
-            </h4><br>
-            We - FA - Corporation Local to manage various sports,
-            our main headquarters in Aqaba, Jordan. We believe
-            that sport unites people of all cultures around the
-            world and improves the health of young people.
-            for this reason; The Academy of the Future brings
-            together a group of the best professionals in their
-            class, through which they promote the development
-            of football in Aqaba.
-          </p>
-        </div>
-      </div>
-      <br>
-    </div>
 
   </div>
 
