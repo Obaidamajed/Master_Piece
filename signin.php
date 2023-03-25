@@ -1,6 +1,6 @@
 <!-- Database Connection  -->
-<?php include('Includes/db.php'); ?>
-<?php include('Includes/validation.php'); ?>
+<?php include('AdminDashboard/Includes/db.php'); ?>
+<?php include('AdminDashboard/Includes/validation.php'); ?>
 
 <!-- HTML  -->
 <!DOCTYPE html>
@@ -25,15 +25,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="AdminDashboard/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="AdminDashboard/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -74,10 +70,12 @@
                         while($row = mysqli_fetch_assoc($result)):
                         
                             if($email == $row['Email'] && $password == $row['Password'] && $row['Is_Admin']){
-                                header("Location: Admins.php");
+                                $id=$row['Id'];
+                                header("Location: AdminDashboard/index.php?id=$id");
+                                // ** ?id=$id This action To prevent users entering into AdminDashboard 
                             }
                         else if($email == $row['Email'] && $password == $row['Password']){
-                            header("Location: ../PublicDashboard/Home.php");
+                            header("Location: PublicDashboard/index.php");
                         }
                         else {
                             $error = "Please Type Valid Email & Password"; // بعطي إيرور في حال دخلت ايميل وباسوورد غير موجودين بالداتا بايس
@@ -176,17 +174,9 @@
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/chart/chart.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
+    
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="AdminDashboard/js/main.js"></script>
 </body>
 
 </html>

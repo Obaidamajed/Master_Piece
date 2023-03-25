@@ -1,6 +1,6 @@
 <?php  include('../Includes/header.php'); ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="../Admins.php">Home</a>
+        <a class="navbar-brand" href="../index.php">Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -12,7 +12,7 @@
                     <a class="nav-link" href="Contact_Us.php">Contact_Us</a>
                 </li>
                 <li class="nav-item">
-                    <a style="color: #9C4B00" class="nav-link" href="../PublicDashboard/Home.php">Public_Dashboard</a>
+                    <a style="color: #9C4B00" class="nav-link" href="../PublicDashboard/index.php">Public_Dashboard</a>
                 </li>
             
             </ul>

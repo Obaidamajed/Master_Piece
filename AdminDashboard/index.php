@@ -1,4 +1,19 @@
 <?php  include('Includes/header.php'); ?>
+
+<!--Start Code ** This Code to prevent users entering into AdminDashboard -->
+    <?php if(!isset($_GET['id']) or !is_numeric($_GET['id'])) {
+            header("Location: ../PublicDashboard/index.php"); 
+        }
+        $id = $_GET['id'];
+        $sql = "SELECT * FROM `users` WHERE `Id`='$id' LIMIT 1"; 
+        $result = mysqli_query($conn, $sql);
+        $check = mysqli_num_rows($result);
+        if ( !$check ) {
+            header("Location: ../PublicDashboard/index.php");
+        }
+    ?>
+<!--End Code ** This Code to prevent users entering into AdminDashboard -->
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="Admins.php">Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

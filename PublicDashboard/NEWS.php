@@ -29,19 +29,19 @@
           <div class="collapse navbar-collapse" id="navbarsExample07XL">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="Home.html" style="font-size: 23px;"><b>Our Academy</b></a>
+                <a class="nav-link active" aria-current="page" href="index.php" style="font-size: 23px;"><b>Our Academy</b></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="Coaches.html" style="font-size: 23px;"><b>Coaches</b></a>
+                <a class="nav-link active" href="Coaches.php" style="font-size: 23px;"><b>Coaches</b></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="Subscription.html" style="font-size: 23px;"><b>Subscription</b></a>
+                <a class="nav-link active" href="Subscription.php" style="font-size: 23px;"><b>Subscription</b></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="FA NEWS.html" style="font-size: 23px;"><b>FA News</b></a>
+                <a class="nav-link active" href="FA NEWS.php" style="font-size: 23px;"><b>FA News</b></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="CONTACT US.html" style="font-size: 23px;"><b>Contact Us</b></a>
+                <a class="nav-link active" href="CONTACT US.php" style="font-size: 23px;"><b>Contact Us</b></a>
               </li>
               
             </ul>
