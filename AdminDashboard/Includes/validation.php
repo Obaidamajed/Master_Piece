@@ -59,6 +59,36 @@ function validEmail($email) {
   return false;
 }
 
+// Validate Date 
+
+function Day($value){
+  if(strlen($value) < 1 or $value < 0 or $value > 31) {
+    return false;
+  }
+  return true;
+}
+
+function Month($value){
+  if(strlen($value) < 1 or $value < 0 or $value > 12) {
+    return false;
+  }
+  return true;
+}
+
+function Year($value){
+  if(strlen($value) < 4 or $value < 2007 or $value > 2016) {
+    return false;
+  }
+  return true;
+}
+
+function Size($value){
+  if((strlen($value) >= 5 && strlen($value) < 8) or strlen($value) == 0) {
+    return true;
+  }
+  return false;
+}
+
 
 
 

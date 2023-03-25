@@ -85,7 +85,7 @@ form input[type="submit"]{
   transition: 0.5s;
 }
 form input[type="submit"]:hover{
-  color: #fff;
+  color: #9C4B00;
   background: #010124;
   /* transform: scale(1.1); */
   width: fit-content;

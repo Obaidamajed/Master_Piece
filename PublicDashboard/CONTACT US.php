@@ -1,3 +1,6 @@
+<?php  include('../AdminDashboard/Includes/db.php'); ?>
+<?php  include('../AdminDashboard/Includes/validation.php'); ?>
+  
   <!DOCTYPE html>
   <html lang="en">
   <head>
@@ -52,22 +55,78 @@
       </div>
 
   <div id="container">
+    
+  <?php
+
+if(isset($_POST['submit'])){ 
+    $name =     santString($_POST['fName']) ; 
+    $email =    santEmail($_POST['email']) ;
+    $number = santString($_POST['pNumber']) ;
+    $message = santString($_POST['Message']) ;
+
+    // Start 1st condition for submit fill required fields
+    if(requiredInput($name) && requiredInput($number) && requiredInput($message)) {
+      // Start 2nd condition
+      if(minInput($name,3) && maxInput($number,10) && maxInput($message,250)) {
+
+                // Start Create In DataBase
+                $sql = "INSERT INTO `contact_us` (`Full_Name`, `Email`, `Phone`, `Message`) VALUES('$name' , '$email', '$number','$message')"; 
+                $result = mysqli_query($conn, $sql); 
+                // End Create In DataBase
+
+                // Start Note Added Successfully
+                if ( $result ) {
+                    $success = "You are send successfully" ;
+                }
+                // End Note Added Successfully
+      }
+      else {
+          $error = "Name Must Be Greate Than 3 Characters, Phone Must Be Less Than 11 Characters & Message Must Be Less Than 251 Characters";
+      }
+      // End 2nd condition
+    }
+    else {
+        $error = "Please Fill All Fields required";
+    }
+    // End 1st condition
+}
+
+?>
+
+<!-- Start For Error  -->
+<?php if($error) : ?>
+  <h5 class="alert alert-danger text-center"><?php echo $error; ?></h5>
+<?php endif; ?>
+<!-- End For Error  -->
+  
+<!-- Start For Correct Insert in DataBase  -->
+<?php if($success) : ?>
+  <h5 class="alert alert-success text-center"> <?php echo $success ;?></h5>
+<?php endif; ?>
+<!-- End For Correct Insert in DataBase  -->
     <br><br>
     <div id="contact_us-core">
+
+
       <div id="left">
         <p style="font-size: 30px;" id="connect_with_us"><b>Connect with us</b></p>
         <p><img width="30px"height="30px" src="images/Contact-Us/house-icon.png" alt="Our-city">&nbsp; Aqaba</p>
         <p><img width="38px"height="38px" src="images/Contact-Us/location icon.png" alt="Our-location"> Future Academy in Aqaba</p>
         <p><img width="30px"height="30px" src="images/Contact-Us/message-icon.png" alt="Our-email"> FutureAcademy@gmail.com</p>
       </div>
+
       <div id="right">
-        <form action="#">
-          <input type="text" name="Full name" placeholder="Full name" id="firstName"><br>
-          <input type="email" name="Email" placeholder="Email" id="email"><br>
-          <input type="number" name="Phone Number" placeholder="Phone Number" id="phoneNumber"><br>
+        <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+
+          <input type="text" name="fName" placeholder="Full name" id="firstName"><br>
+          <input type="email" name="email" placeholder="Email" id="email"><br>
+          <input type="text" name="pNumber" placeholder="Phone Number" id="phoneNumber"><br>
           <input type="text" name="Message" placeholder="Message" id="message"><br>
-          <input type="submit" value="Submit"  id="submit" >
+
+          <input type="submit" name="submit" value="Submit"  id="submit" >
+
         </form>
+
       </div>
     </div>
     <br><br>

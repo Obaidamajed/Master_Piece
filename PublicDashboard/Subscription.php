@@ -1,3 +1,6 @@
+<?php  include('../AdminDashboard/Includes/db.php'); ?>
+<?php  include('../AdminDashboard/Includes/validation.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,93 +57,108 @@
 
     <div id="container">
       <br>
+
+      <?php
+
+      if(isset($_POST['submit'])){ 
+          $name =     santString($_POST['fName']) ; 
+          $email =    santEmail($_POST['Email']) ;
+          $number = santString($_POST['pNumber']) ;
+          $Day = $_POST['Day'];
+          $Month = $_POST['Month'] ;
+          $Year = $_POST['Year'] ;
+          $Size = $_POST['Size'] ;
+          $message = santString($_POST['message']) ;
+
+          // Start 1st condition for submit fill required fields
+          if(requiredInput($name) && requiredInput($number) && requiredInput($Day) && requiredInput($Month) && requiredInput($Year)) {
+            // Start 2nd condition
+            if(minInput($name,3) && maxInput($number,10) && maxInput($message,250)) {
+                // Start 3rd condition 
+                if(Day($Day) && Month($Month) && Year($Year)){
+                  // Start 4th condition 
+                  if(Size($Size)) {
+
+                      // Start Create In DataBase
+                      $sql = "INSERT INTO `subscribe` (`Full_Name`, `Email`, `Phone`, `Day`, `Month`, `Year`, `Size`, `Message`) VALUES('$name' , '$email', '$number', '$Day', '$Month', '$Year', '$Size', '$message' ) "; // جملة الكويري 
+                      $result = mysqli_query($conn, $sql); 
+                      // End Create In DataBase
+
+                      // Start Note Added Successfully
+                      if ( $result ) {
+                          $success = "You are submited successfully" ;
+                      }
+                      // End Note Added Successfully
+
+                  }
+                  else {
+                    $error = "Please Enter Correct Size";
+                  }
+                  // End 4th condition 
+                }
+                else {
+                  $error = "Please Enter Correct Date";
+                }
+                // End 3rd condition 
+            }
+            else {
+                $error = "Name Must Be Greate Than 3 Characters & Password Must Be Less Than 11 Characters & Message Must Be Less Than 251 Characters";
+            }
+            // End 2nd condition
+          }
+          else {
+              $error = "Please Fill All Fields required";
+          }
+          // End 1st condition
+      }
+
+      ?>
+
+      <!-- Start For Error  -->
+      <?php if($error) : ?>
+          <h5 class="alert alert-danger text-center"><?php echo $error; ?></h5>
+      <?php endif; ?>
+      <!-- End For Error  -->
+          
+      <!-- Start For Correct Insert in DataBase  -->
+      <?php if($success) : ?>
+          <h5 class="alert alert-success text-center">  <?php echo $success ;?> <strong>Please wait for the confirmation message that will be sent to your phone</strong>  </h5>
+      <?php endif; ?>
+      <!-- End For Correct Insert in DataBase  -->
+
       <div id="subscribe">
-        <form action="#">
-          <input class="inputs" type="text" name="fName" id="" placeholder="Full Name"><br><br>
-          <input class="inputs" type="email" name="Email" id="" placeholder="Email"><br><br>
-          <input class="inputs" type="number" name="pNumber" id="" placeholder="Phone Number"><br><br>
+
+        <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+
+          <input class="inputs" type="text" name="fName" placeholder="Full Name *"><br><br>
+          <input class="inputs" type="email" name="Email" placeholder="Email"><br><br>
+          <input class="inputs" type="text" name="pNumber" placeholder="Phone Number *"><br><br>
+
           <p>Date Of Birth <spans style="color: red;">*</span></p>
-          <select name="Day" id="">
-            <option value="Day" disabled selected>Day</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-            <option value="13">13</option>
-            <option value="14">14</option>
-            <option value="15">15</option>
-            <option value="16">16</option>
-            <option value="17">17</option>
-            <option value="18">18</option>
-            <option value="19">19</option>
-            <option value="20">20</option>
-            <option value="21">21</option>
-            <option value="22">22</option>
-            <option value="23">23</option>
-            <option value="24">24</option>
-            <option value="25">25</option>
-            <option value="26">26</option>
-            <option value="27">27</option>
-            <option value="28">28</option>
-            <option value="29">29</option>
-            <option value="30">30</option>
-            <option value="31">31</option>
-          </select>
+          <input type="number" name="Day" placeholder="Day" style="width: 25%;">
           /
-          <select name="Month" id="">
-            <option value="Month"disabled selected>Month</option>
-            <option value="Jan">Jan</option>
-            <option value="Feb">Feb</option>
-            <option value="Mar">Mar</option>
-            <option value="Apr">Apr</option>
-            <option value="May">May</option>
-            <option value="Jun">Jun</option>
-            <option value="Jul">Jul</option>
-            <option value="Aug">Aug</option>
-            <option value="Sep">Sep</option>
-            <option value="Oct">Oct</option>
-            <option value="Nov">Nov</option>
-            <option value="Dec">Dec</option>
-          </select>
+          <input type="number" name="Month" placeholder="Month" style="width: 25%;">
           /
-          <select name="Year" id="">
-          <option value="Year"disabled selected>Year</option>
-          <option value="2007">2007</option>
-          <option value="2008">2008</option>
-          <option value="2009">2009</option>
-          <option value="2010">2010</option>
-          <option value="2011">2011</option>
-          <option value="2012">2012</option>
-          <option value="2013">2013</option>
-          <option value="2014">2014</option>
-          <option value="2015">2015</option>
-          <option value="2016">2016</option>
-          </select><br><br>
-          <select name="Size" id="" style="width: 80%; margin: 0 auto;">
-            <option value="Size" style="color: gray;" selected disabled>Size</option>
-            <option value="XS">XS:6 Years</option>
-            <option value="S">X:8 Years</option>
-            <option value="M">M:10 Years</option>
-            <option value="L">L:12 Years</option>
-            <option value="XL">XL:14 Years</option>
-          </select><br><br>
+          <input type="number" name="Year" placeholder="Year" style="width: 25%;">
+          <br><br>
+
+          <input type="text" name="Size" style="width: 80%; margin: 0 auto;" placeholder="Size">
+          <br><br>
+
           <p>Make sure you have the following: <span style="color: red;">*</span></p>
           <p> <input required type="checkbox"> A valid residence visa in the State of Jordan </p>
           <p> <input required type="checkbox"> A valid Jordanian health insurance </p>
           <p> <input required type="checkbox"> He does not suffer from any health problems </p>
-          <input class="inputs" type="text" style="height: 100px;" placeholder="Message"><br><br>
-          <input type="submit" placeholder="Submit"><br><br>
+
+          <input class="inputs" type="text" name="message" style="height: 100px;" placeholder="Message"><br><br>
+
+          <input type="submit" value="Submit" name="submit" placeholder="Submit"><br><br>
+          
           <p> * Registration means that you allow us
             to take photos for marketing purposes.</p>
+
         </form>
+
       </div>
       <br>
     </div>
