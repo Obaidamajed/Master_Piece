@@ -26,8 +26,7 @@
 <?php  
     // Read From DataBase
     $sql = "SELECT * FROM `coaches` ";
-    $result = mysqli_query($conn,$sql); // بقلو جملة الكويري طبقها على الداتا بايس المتصل فيها 
-    // $conn موجود في ملف ال db.php 
+    $result = mysqli_query($conn,$sql); 
 
 
 ?>
@@ -58,7 +57,6 @@
                         <td><?php echo $row['Photo']; ?></td>
                         <td>
                             <a class="btn btn-info" href="editCoach.php?id=<?php echo $row['Id']; ?>"> <i class="fa fa-edit"></i> </a>
-                            <!-- ?id=<?php echo $row['user_id']; ?> بهاي الطريقة ببعث الآي دي لخاص بالعنصر اللي ضغطت عليه على صفحة الإيديت -->
                         </td>
                         <td>
                             <a class="btn btn-danger" href="deleteCoach.php?id=<?php echo $row['Id']; ?>"> <i class="fa fa-close"></i> </a>
