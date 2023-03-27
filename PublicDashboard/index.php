@@ -39,10 +39,10 @@
                 <a class="nav-link active" href="Subscription.php" style="font-size: 23px;"><b>Subscription</b></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="FA NEWS.php" style="font-size: 23px;"><b>FA News</b></a>
+                <a class="nav-link active" href="News.php" style="font-size: 23px;"><b>FA News</b></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="CONTACT US.php" style="font-size: 23px;"><b>Contact Us</b></a>
+                <a class="nav-link active" href="Contact_Us.php" style="font-size: 23px;"><b>Contact Us</b></a>
               </li>
               
             </ul>
@@ -191,7 +191,7 @@
     </div>
   </div>
   <!-- Footer  -->
-  <div id="footer">
+  <div id="footer" style= "line-height: 8px">
     <br>
     <!-- FA & JFA Logos  -->
     <div id="logo-up">
@@ -204,7 +204,7 @@
       <a id="face" href="https://ar-ar.facebook.com/ALFAISALYSCJO/" target="_blank" style="color: black;"><i class="fa-brands fa-square-facebook fa-2x"></i></a> 
     </div>
     <br>
-    <p style="text-align: center; color: black;">© 2023 Future Academy. all rights are save.</p>
+    <p style="text-align: center; color: black; margin-top: 20px">© 2023 Future Academy. all rights are save.</p>
   </div>
   
   <script src="../JS/bootstrap.bundle.min.js"></script>

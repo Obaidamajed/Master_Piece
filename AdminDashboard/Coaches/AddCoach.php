@@ -1,12 +1,11 @@
 <?php  include('../Includes/header.php'); ?>
 <?php  include('../Includes/validation.php'); ?>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="../index.php">Home</a>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #010124;">
+        <a class="navbar-brand" href="AddCoach.php">Add Coach</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
             
@@ -14,17 +13,27 @@
                     <a class="nav-link" href="Coaches.php">Coaches</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="AddCoach.php">Add Coach</a>
+                    <a class="nav-link" href="../News/News.php">News</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Subscribe/Subscribe.php">Subscribe</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Contact_Us/Contact_Us.php">Contact_Us</a>
+                </li>
+                <li class="nav-item">
+                    <a style="color: #9C4B00" class="nav-link" href="../../PublicDashboard/index.php">Public_Dashboard</a>
+                </li>
+            
             </ul>
         </div>
-
     </nav>
+
     <div class="container-fluid">
 <?php
 
-    if(isset($_POST['submit'])){ // كأني بقلو اذا ضغطت على كبسة السبمت, بمثابة الأون كليك بالجافا سكريبت
-        $name =     santString($_POST['name']) ; // قيمة الإنبوت اللي إلو نايم اسمو نايم بطبق عليه الفنكشن اللي اسمو سانتسترنق من صفحة الفاليدايشن
+    if(isset($_POST['submit'])){ 
+        $name =     santString($_POST['name']) ; 
         $category =    santEmail($_POST['category']) ;
         
 
@@ -39,8 +48,8 @@
                         move_uploaded_file($tempname, $folder);
 
                     // Start Create Coach In DataBase
-                    $sql = "INSERT INTO `coaches` (`Name`, `Category`, `Photo`) VALUES('$name' , '$category', '$filename' ) "; // جملة الكويري 
-                    $result = mysqli_query($conn, $sql); // حددت جملة الكويري على أي داتا بايس بدي أطبقها 
+                    $sql = "INSERT INTO `coaches` (`Name`, `Category`, `Photo`) VALUES('$name' , '$category', '$filename' ) "; // Query Sentence
+                    $result = mysqli_query($conn, $sql); // i selected query sentence that i want to apply to the database
                     // End Create Coach In DataBase
 
                     // Start Note Added Successfully
@@ -52,7 +61,7 @@
 
         }
         else {
-            $error = "Please Fill All Fields"; // هذا الفاريابل موجود بصفحة الفاليديشن
+            $error = "Please Fill All Fields"; 
         }
     }
 
@@ -71,8 +80,7 @@
     <!-- End For Correct Insert in DataBase  -->
 
     <div class="col-md-6 offset-md-3">
-        <form class="my-2 p-3 border bg-light" method="POST" enctype="multipart/form-data" action="<?php echo $_SERVER['PHP_SELF']; ?>"> 
-            <!-- $_SERVER['PHP_SELF'] بتوديني على نفس الصفحة اللي انا فيها  -->
+        <form class="my-2 p-3 border" method="POST" enctype="multipart/form-data" action="<?php echo $_SERVER['PHP_SELF']; ?>"> 
             <div class="form-group">
                 <label for="exampleInputName1">Full Name</label>
                 <input type="text" name="name" class="form-control" id="exampleInputName1" >
@@ -88,7 +96,7 @@
                 <input Required type="file" name="pic" class="form-control" id="exampleInputImage1">
             </div>
             
-            <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+            <button type="submit" class="btn" name="submit" style="background-color: #9c4b00; color:#010124">Submit</button>
         </form>
     </div>
 

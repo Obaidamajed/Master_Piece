@@ -40,10 +40,10 @@
                 <a class="nav-link active" href="Subscription.php" style="font-size: 23px;"><b>Subscription</b></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="FA NEWS.php" style="font-size: 23px;"><b>FA News</b></a>
+                <a class="nav-link active" href="News.php" style="font-size: 23px;"><b>FA News</b></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="CONTACT US.php" style="font-size: 23px;"><b>Contact Us</b></a>
+                <a class="nav-link active" href="Contact_Us.php" style="font-size: 23px;"><b>Contact Us</b></a>
               </li>
               
             </ul>
@@ -144,13 +144,15 @@
 
           <input type="text" name="Size" style="width: 80%; margin: 0 auto;" placeholder="Size">
           <br><br>
+          <p style=" width: 90%; margin: 0 auto"><span style="color:red">Note ** </span><span style="color:#9c4b00"><b>Size Options</b></span>: XS (6-8 year), S(8-10year), M(10-12year), L(12-14), XL(14-16year).</p>
+          <br>
 
           <p>Make sure you have the following: <span style="color: red;">*</span></p>
-          <p> <input required type="checkbox"> A valid residence visa in the State of Jordan </p>
-          <p> <input required type="checkbox"> A valid Jordanian health insurance </p>
-          <p> <input required type="checkbox"> He does not suffer from any health problems </p>
+          <p class="Make_Sure" style="display: flex; justify-content: flex-start; padding-left: 10%"> <input required type="checkbox">&nbsp; A valid residence visa in the State of Jordan </p>
+          <p class="Make_Sure" style="display: flex; justify-content: flex-start; padding-left: 10%"> <input required type="checkbox">&nbsp; A valid Jordanian health insurance </p>
+          <p class="Make_Sure" style="display: flex; justify-content: flex-start; padding-left: 10%"> <input required type="checkbox">&nbsp; You does not suffer from any health problems </p>
 
-          <input class="inputs" type="text" name="message" style="height: 100px;" placeholder="Message"><br><br>
+          <textarea rows="5" cols="50" style="width: 80%; margin: 0 auto" class="form-control" type="text" name="message" placeholder="Message"></textarea><br><br>
 
           <input type="submit" value="Submit" name="submit" placeholder="Submit"><br><br>
           
@@ -164,7 +166,7 @@
     </div>
 
     <!-- Footer  -->
-  <div id="footer">
+  <div id="footer" style= "line-height: 8px">
     <br>
     <!-- FA & JFA Logos  -->
     <div id="logo-up">
@@ -177,7 +179,7 @@
       <a href="https://ar-ar.facebook.com/ALFAISALYSCJO/" target="_blank" style="color: black;"><i class="fa-brands fa-square-facebook fa-2x"></i></a> 
     </div>
     <br>
-    <p style="text-align: center; color: black;">© 2023 Future Academy. all rights are save.</p>
+    <p style="text-align: center; color: black; margin-top: 20px">© 2023 Future Academy. all rights are save.</p>
   </div>
 
 

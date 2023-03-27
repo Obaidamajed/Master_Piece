@@ -2,10 +2,10 @@
 <?php 
 
     if(!isset($_GET['id']) or !is_numeric($_GET['id'])) {
-        header("Location: Coaches.php"); // اذا الآي دي مو موجود واذا الآي دي مو نيوميريك ابعتو على صفحة الإنديكس
+        header("Location: Coaches.php"); 
     }
     $id = $_GET['id'];
-    $sql = "SELECT * FROM `coaches` WHERE `Id`='$id' LIMIT 1"; // LIMIT 1 هيك بنتأكد إنو حيرجع بعنصر واحد فقط
+    $sql = "SELECT * FROM `coaches` WHERE `Id`='$id' LIMIT 1"; 
     $result = mysqli_query($conn, $sql);
     $check = mysqli_num_rows($result);
     if ( !$check ) {

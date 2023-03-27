@@ -4,7 +4,7 @@
 <?php
 
     if(isset($_POST['submit'])){
-        $fName =     santString($_POST['fName']) ; // قيمة الإنبوت اللي إلو نايم اسمو نايم بطبق عليه الفنكشن اللي اسمو سانتسترنق من صفحة الفاليدايشن
+        $fName =     santString($_POST['fName']) ; 
         $email =    santEmail($_POST['email']) ;
         $phone =    santString($_POST['phone']) ;
           $Day = $_POST['Day'];
@@ -32,7 +32,7 @@
 
                 if ( $result ) {
                     $success = "Updated Successfully";
-                    header("refresh:1;url=Subscribe.php"); // هيك بنقلني على صفحة الإندكس بعد 3 ثواني
+                    header("refresh:3;url=Subscribe.php"); 
                 }
                 
             }  else {
@@ -51,7 +51,7 @@
             // End 2nd condition
         }
         else {
-            $error = "Please Fill All Fields"; // هذا الفاريابل موجود بصفحة الفاليديشن
+            $error = "Please Fill All Fields";
         }
     }
 
@@ -62,7 +62,6 @@
     <?php if($error) : ?>
         <h5 class="alert alert-danger text-center"><?php echo $error; ?></h5>
         <a href="javascript:history.go(-1)" class="btn btn-primary">Go Back > > </a> 
-        <!-- javascript:history.go(-1)" برجعني على الصفحة اللي كنت فيها  -->
     <?php endif; ?>
 
     <?php if($success) : ?>

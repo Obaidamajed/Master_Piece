@@ -3,13 +3,13 @@
     <?php 
 
         if(!isset($_GET['id']) or !is_numeric($_GET['id'])) {
-            header("Location: Coaches.php"); // اذا الآي دي مو موجود واذا الآي دي مو نيوميريك ابعتو على صفحة الإنديكس
+            header("Location: Coaches.php"); // If "id" is not exists or not numeric, it will send me to Coaches.php page
         }
         $id = $_GET['id'];
-        $sql = "SELECT * FROM `coaches` WHERE `Id`='$id' LIMIT 1"; // LIMIT 1 هيك بنتأكد إنو حيرجع بعنصر واحد فقط
+        $sql = "SELECT * FROM `coaches` WHERE `Id`='$id' LIMIT 1";
         $result = mysqli_query($conn, $sql);
         $check = mysqli_num_rows($result);
-        if ( !$check ) {
+        if ( !$check ) { // If "id" is not exists in database, it will send me to Coaches.php page
             header("Location: Coaches.php");
         }
         $sql2 = "DELETE FROM `coaches` WHERE `Id` = '$id' ";

@@ -1,26 +1,35 @@
 <?php  include('../Includes/header.php'); ?>
 <?php  include('../Includes/validation.php'); ?>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="../index.php">Home</a>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #010124;">
+        <a class="navbar-brand" href="AddSubscriber.php">Add Subscriber</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
             
                 <li class="nav-item">
-                    <a class="nav-link" href="Subscribe.php">Subsribers</a>
+                    <a class="nav-link" href="Subscribe.php">Subscribers</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="AddSubscriber.php">Add Subsriber</a>
+                    <a class="nav-link" href="../Coaches/Coaches.php">Coaches</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../News/News.php">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Contact_Us/Contact_Us.php">Contact_Us</a>
+                </li>
+                <li class="nav-item">
+                    <a style="color: #9C4B00" class="nav-link" href="../../PublicDashboard/index.php">Public_Dashboard</a>
+                </li>
+            
             </ul>
         </div>
-
     </nav>
-    <div class="container-fluid">
+    
+<div class="container-fluid">
 
     <?php
 
@@ -94,41 +103,43 @@
         <form class="my-2 p-3 border" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 
             <div class="form-group">
-                <label for="exampleInputName1">Full_Name</label>
-                <input type="text" name="fName"  class="form-control" id="exampleInputName1" placeholder="Required *"></input>
+                <label for="exampleInputName1" style="color:red">Required *</label>
+                <input type="text" name="fName"  class="form-control" id="exampleInputName1" placeholder="Full_Name"></input>
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="text" name="email"  class="form-control" id="exampleInputName1" placeholder="Email"></input>
             </div>
             <div class="form-group">
-                <label for="exampleInputcategory1">Email</label>
-                <input type="text" name="email"  class="form-control" id="exampleInputName1" ></input>
+                <label for="exampleInputcategory1" style="color:red">Required *</label>
+                <input type="text" name="phone"  class="form-control" id="exampleInputName1" placeholder="Phone"></input>
             </div>
             <div class="form-group">
-                <label for="exampleInputcategory1">Phone</label>
-                <input type="text" name="phone"  class="form-control" id="exampleInputName1" placeholder="Required *"></input>
+                <label for="exampleInputcategory1"style="color:red">Required *</label>
+                <input type="number" name="Day"  class="form-control" id="exampleInputName1" placeholder="Day"></input>
             </div>
             <div class="form-group">
-                <label for="exampleInputcategory1">Day</label>
-                <input type="number" name="Day"  class="form-control" id="exampleInputName1" placeholder="Required *"></input>
+                <label for="exampleInputcategory1"style="color:red">Required *</label>
+                <input type="number" name="Month"  class="form-control" id="exampleInputName1" placeholder="Month"></input>
             </div>
             <div class="form-group">
-                <label for="exampleInputcategory1">Month</label>
-                <input type="number" name="Month"  class="form-control" id="exampleInputName1" placeholder="Required *"></input>
+                <label for="exampleInputcategory1"style="color:red">Required *</label>
+                <input type="number" name="Year"  class="form-control" id="exampleInputName1" placeholder="Year"></input>
             </div>
+            <br>
             <div class="form-group">
-                <label for="exampleInputcategory1">Year</label>
-                <input type="number" name="Year"  class="form-control" id="exampleInputName1" placeholder="Required *"></input>
+                <input type="text" name="Size"  class="form-control" id="exampleInputName1" placeholder="Size: XS, S, M, L, XL" ></input>
             </div>
+            <br>
             <div class="form-group">
-                <label for="exampleInputcategory1">Size</label>
-                <input type="text" name="Size"  class="form-control" id="exampleInputName1" ></input>
-            </div>
-            <div class="form-group">
-                <label for="exampleInputcategory1">Message</label>
-                <input type="text" name="Message" class="form-control" id="exampleInputName1" ></input>
+                <textarea rows="5" cols="50" class="form-control" type="text" name="Message" placeholder="Message"></textarea><br><br>
             </div>
 
-            <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+            <button type="submit" class="btn" name="submit" style="background-color: #9c4b00; color:#010124">Submit</button>
         </form>
     </div>
+    
+</div>
 
 <?php  include('../Includes/footer.php'); ?>
 

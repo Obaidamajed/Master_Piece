@@ -62,16 +62,18 @@ form{
   padding: 5px;
   border: none;
 }
-.inputs{
-  width: 80%;
-}
+
+/* .Make_Sure {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 10%;
+} */
+
 input[type="submit"]{
   background: #9C4B00;
   color: #fff;
   font-size: 20px;
 }
-
-
 
 #footer{
   background: #9C4B00;
