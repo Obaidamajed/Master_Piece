@@ -120,6 +120,13 @@ input[type="submit"]{
   display: flex;
   justify-content: space-around;
 }
+
+@media screen and (max-width: 740px ) {
+  .box{
+    padding: 3px;
+  }
+}
+
 @media screen and (max-width: 540px ) {
   #table1,#table2 {
     width: 96%;
@@ -134,7 +141,7 @@ input[type="submit"]{
     grid-gap: 8px 25px;
   }
   #insta,#face {
-    margin: 0 5px;
+    margin: 0 15px;
   }
   #core-img img {
     width: 150px;
@@ -147,9 +154,22 @@ input[type="submit"]{
     /* transform: translate(-50%,-50%); */
     color:#9C4B00;
   }
+  #logo-up{
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+  }
 }
-@media screen and (max-width: 740px ) {
-  .box{
-    padding: 3px;
+
+@media screen and (max-width: 340px ) {
+  #footer p{
+    font-size: 13px;
+  }
+  #logo-up{
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
   }
 }

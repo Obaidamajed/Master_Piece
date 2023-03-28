@@ -45,9 +45,7 @@
                         <th scope="col">Full_Name</th>
                         <th scope="col">Email</th>
                         <th scope="col">Phone</th>
-                        <th scope="col">Day</th>
-                        <th scope="col">Month</th>
-                        <th scope="col">Year</th>
+                        <th scope="col">Date</th>
                         <th scope="col">Size</th>
                         <th scope="col">Message</th>
                         <th scope="col">Edit</th>
@@ -59,19 +57,19 @@
                 <?php if(mysqli_num_rows($result) > 0): ?> 
                     <?php while($row = mysqli_fetch_assoc($result)): ?>
                         <tr>
-                            <td style="max-width:2em; overflow-y: hidden"><?php echo $row['Id']; ?></td>
-                            <td style="max-width:2em; overflow-y: hidden"><?php echo $row['Full_Name']; ?></td>
-                            <td style="max-width:2em; overflow-y: hidden"><?php echo $row['Email']; ?></td>
-                            <td style="max-width:2em; overflow-y: hidden"><?php echo $row['Phone']; ?></td>
-                            <td style="max-width:2em; overflow-y: hidden"><?php echo $row['Day']; ?></td>
-                            <td style="max-width:2em; overflow-y: hidden"><?php echo $row['Month']; ?></td>
-                            <td style="max-width:2em; overflow-y: hidden"><?php echo $row['Year']; ?></td>
-                            <td style="max-width:2em; overflow-y: hidden"><?php echo $row['Size']; ?></td>
-                            <td style="max-width:2em; overflow-y: hidden" style="max-width:300px;"><?php echo $row['Message']; ?></td>
-                            <td style="max-width:2em; overflow-y: hidden">
+                            <td style="max-width:2.5em; overflow-y: hidden"><?php echo $row['Id']; ?></td>
+                            <td style="max-width:2.5em; overflow-y: hidden"><?php echo $row['Full_Name']; ?></td>
+                            <td style="max-width:2.5em; overflow-y: hidden"><?php echo $row['Email']; ?></td>
+                            <td style="max-width:2.5em; overflow-y: hidden"><?php echo $row['Phone']; ?></td>
+                            <td style="max-width:2.5em; overflow-y: hidden"><?php echo $row['Day'] . "\\" .  $row['Month'] . "\\" .  $row['Year']; ?></td>
+                            <!-- <td style="max-width:2em; overflow-y: hidden"><?php echo $row['Month']; ?></td>
+                            <td style="max-width:2em; overflow-y: hidden"><?php echo $row['Year']; ?></td> -->
+                            <td style="max-width:2.5em; overflow-y: hidden"><?php echo $row['Size']; ?></td>
+                            <td style="max-width:2.5em; overflow-y: hidden" style="max-width:300px;"><?php echo $row['Message']; ?></td>
+                            <td style="max-width:2.5em; overflow-y: hidden">
                                 <a class="btn btn-info" href="editSubscriber.php?id=<?php echo $row['Id']; ?>"> <i class="fa fa-edit"></i> </a>
                             </td>
-                            <td style="max-width:2em; overflow-y: hidden">
+                            <td style="max-width:2.5em; overflow-y: hidden">
                                 <a class="btn btn-danger" href="deleteSubscriber.php?id=<?php echo $row['Id']; ?>"> <i class="fa fa-close"></i> </a>
                             </td>
                         </tr>

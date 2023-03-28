@@ -22,7 +22,7 @@
     <div id="header">
       <nav class="navbar navbar-expand-lg navbar-light bg-transparent" aria-label="Ninth navbar example">
         <div class="container-xl">
-          <a class="navbar-brand" href="Home.html"><img src="images/logo.png" alt="" width="120px" height="120px"></a>
+          <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="" width="120px" height="120px"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07XL" aria-controls="navbarsExample07XL" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -85,7 +85,7 @@
     <br>
     <!-- FA & JFA Logos  -->
     <div id="logo-up">
-      <a href="Home.html"><img style="width:85px;height:85px; margin-bottom: 13px;" src="images/logo.png" alt="FUTURE ACADEMY"></a> 
+      <a href="index.php"><img style="width:85px;height:85px; margin-bottom: 13px;" src="images/logo.png" alt="FUTURE ACADEMY"></a> 
       <a href="https://www.jfa.jo/" target="_blank"><img style="width:70px;height:70px;" src="images/Jordan_FA.png" alt="JFA"></a>
     </div>
     <!-- Social Media Logos -->
