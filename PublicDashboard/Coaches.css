@@ -59,6 +59,29 @@ div ul{
 #coaches-core div{
   padding: 20px 0 0 0;
 }
+
+#footer{
+  background: #9C4B00;
+  padding-bottom: 1px;
+  line-height: 8px;
+}
+#logo-up{
+  margin: 0 auto;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+#logo-down{
+  margin: 0 auto;
+  width: 15%;
+  display: flex;
+  justify-content: space-around;
+}
+#footer p {
+  text-align: center;
+  margin-top: 15px;
+  color: black;
+}
 @media screen and (max-width:767px){
   #coaches-core{
     width: 80%;
@@ -74,22 +97,51 @@ div ul{
   }
 }
 
-
-
-#footer{
-  background: #9C4B00;
-  padding-bottom: 1px;
-
+@media screen and (max-width: 540px ) {
+  #header-paragraph{
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    color:#9C4B00;
+  } 
+  #header {
+    height: 35em;
+  }
+  #logo-up{
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+  }
+  #insta {
+    margin: 15px 15px 0 0;
+    color: black;
+  }
+  #face {
+    margin: 15px 0 0 15px;
+    color: black;
+  } 
+   
 }
-#logo-up{
-  margin: 0 auto;
-  width: 50%;
-  display: flex;
-  justify-content: space-around;
+
+@media screen and (max-width: 340px ) {
+  #footer p{
+    font-size: 13px;
+  }
+  #logo-up{
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+  }
+  #header-paragraph{
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    color:#9C4B00;
+  }
+  div ul li a b{
+    font-size: 20px;
+  }
 }
-#logo-down{
-  margin: 0 auto;
-  width: 15%;
-  display: flex;
-  justify-content: space-around;
-}
+

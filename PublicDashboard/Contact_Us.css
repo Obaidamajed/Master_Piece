@@ -116,3 +116,16 @@ form input[type="submit"]:hover{
   display: flex;
   justify-content: space-around;
 }
+
+#insta {
+    margin: 15px 15px 0 0;
+    color: black;
+  }
+  
+#face {
+    margin: 15px 0 0 15px;
+    color: black;
+  }
+  #footer p {
+    color: red;
+  }

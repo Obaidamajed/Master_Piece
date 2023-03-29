@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Academy</title>
   <!-- Css file for home page -->
-  <link rel="stylesheet" href="index.css">
+  <!-- <link rel="stylesheet" href="index.css"> -->
   <style>
     <?php
     $css = file_get_contents('index.css');
@@ -198,11 +198,11 @@
     </div>
   </div>
   <!-- Footer  -->
-  <div id="footer" style= "line-height: 8px">
+  <div id="footer">
     <br>
     <!-- FA & JFA Logos  -->
     <div id="logo-up">
-      <a href="index.php"><img style="width:85px;height:85px; " src="images/logo.png" alt="FUTURE ACADEMY"></a> 
+      <a href="index.php"><img style="width:85px;height:85px;" src="images/logo.png" alt="FUTURE ACADEMY"></a> 
       <a href="https://www.jfa.jo/" target="_blank"><img style="width:70px;height:75px; padding-top: 5px" src="images/Jordan_FA.png" alt="JFA"></a>
     </div>
     <!-- Social Media Logos -->
@@ -211,7 +211,7 @@
       <a id="face" href="https://ar-ar.facebook.com/ALFAISALYSCJO/" target="_blank" style="color: black;"><i class="fa-brands fa-square-facebook fa-2x"></i></a> 
     </div>
     <br>
-    <p style="text-align: center; color: black; margin-top: 20px">© 2023 Future Academy. all rights are save.</p>
+    <p>© 2023 Future Academy. all rights are save.</p>
   </div>
   
   <script src="../JS/bootstrap.bundle.min.js"></script>

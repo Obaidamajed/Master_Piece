@@ -8,7 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FA News</title>
     <!-- Css file for home page -->
-    <link rel="stylesheet" href="FA News.css">
+    <link rel="stylesheet" href="News.css">
+    <style>
+    <?php
+    $css = file_get_contents('News.css');
+    echo $css;
+    ?>
+  </style>
+
     <!-- Bootstrap files -->
     <link href="../CSS/bootstrap.css" rel="stylesheet">
     <link href="../CSS/bootstrap.min.css" rel="stylesheet">
@@ -93,8 +100,8 @@
     <br>
     <!-- FA & JFA Logos  -->
     <div id="logo-up">
-      <a href="index.php"><img style="width:85px;height:85px; margin-bottom: 13px;" src="images/logo.png" alt="FUTURE ACADEMY"></a> 
-      <a href="https://www.jfa.jo/" target="_blank"><img style="width:70px;height:70px;" src="images/Jordan_FA.png" alt="JFA"></a>
+      <a href="index.php"><img style="width:85px;height:85px;" src="images/logo.png" alt="FUTURE ACADEMY"></a> 
+      <a href="https://www.jfa.jo/" target="_blank"><img style="width:70px;height:75px; padding-top: 5px" src="images/Jordan_FA.png" alt="JFA"></a>
     </div>
     <!-- Social Media Logos -->
     <div id="logo-down">

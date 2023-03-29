@@ -10,6 +10,12 @@
   <title>Subscrption</title>
     <!-- Css file for home page -->
     <link rel="stylesheet" href="Subscription.css">
+    <style>
+    <?php
+    $css = file_get_contents('Subscription.css');
+    echo $css;
+    ?>
+  </style>
     <!-- Bootstrap files -->
     <link href="../CSS/bootstrap.css" rel="stylesheet">
     <link href="../CSS/bootstrap.min.css" rel="stylesheet">
@@ -148,9 +154,9 @@
           <br>
 
           <p>Make sure you have the following: <span style="color: red;">*</span></p>
-          <p class="Make_Sure" style="display: flex; justify-content: flex-start; padding-left: 10%"> <input required type="checkbox">&nbsp; A valid residence visa in the State of Jordan </p>
-          <p class="Make_Sure" style="display: flex; justify-content: flex-start; padding-left: 10%"> <input required type="checkbox">&nbsp; A valid Jordanian health insurance </p>
-          <p class="Make_Sure" style="display: flex; justify-content: flex-start; padding-left: 10%"> <input required type="checkbox">&nbsp; You does not suffer from any health problems </p>
+          <p class="Make_Sure"> <input required type="checkbox">&nbsp; A valid residence visa in the State of Jordan </p>
+          <p class="Make_Sure"> <input required type="checkbox">&nbsp; A valid Jordanian health insurance </p>
+          <p class="Make_Sure"> <input required type="checkbox">&nbsp; You does not suffer from any health problems </p>
 
           <textarea rows="5" cols="50" style="width: 80%; margin: 0 auto" class="form-control" type="text" name="message" placeholder="Message"></textarea><br><br>
 
@@ -166,20 +172,20 @@
     </div>
 
     <!-- Footer  -->
-  <div id="footer" style= "line-height: 8px">
+  <div id="footer">
     <br>
     <!-- FA & JFA Logos  -->
     <div id="logo-up">
-      <a href="index.php"><img style="width:85px;height:85px; margin-bottom: 13px;" src="images/logo.png" alt="FUTURE ACADEMY"></a> 
-      <a href="https://www.jfa.jo/" target="_blank"><img style="width:70px;height:70px;" src="images/Jordan_FA.png" alt="JFA"></a>
+      <a href="index.php"><img style="width:85px;height:85px;" src="images/logo.png" alt="FUTURE ACADEMY"></a> 
+      <a href="https://www.jfa.jo/" target="_blank"><img style="width:70px;height:75px; padding-top: 5px" src="images/Jordan_FA.png" alt="JFA"></a>
     </div>
     <!-- Social Media Logos -->
     <div id="logo-down">
-      <a href="https://www.instagram.com/alfaisalyscjo/" target="_blank" style="color: black;"><i class="fa-brands fa-instagram fa-2x"></i></a> 
-      <a href="https://ar-ar.facebook.com/ALFAISALYSCJO/" target="_blank" style="color: black;"><i class="fa-brands fa-square-facebook fa-2x"></i></a> 
+      <a id="insta" href="https://www.instagram.com/alfaisalyscjo/" target="_blank" style="color: black;"><i class="fa-brands fa-instagram fa-2x"></i></a> 
+      <a id="face" href="https://ar-ar.facebook.com/ALFAISALYSCJO/" target="_blank" style="color: black;"><i class="fa-brands fa-square-facebook fa-2x"></i></a> 
     </div>
     <br>
-    <p style="text-align: center; color: black; margin-top: 20px">© 2023 Future Academy. all rights are save.</p>
+    <p>© 2023 Future Academy. all rights are save.</p>
   </div>
 
 

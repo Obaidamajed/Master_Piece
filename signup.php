@@ -119,9 +119,6 @@
 
         <!-- End PHP  -->
 
-        
-        
-
 
         <!-- Sign Up Start -->
         <div class="container-fluid">

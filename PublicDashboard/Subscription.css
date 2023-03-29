@@ -63,11 +63,15 @@ form{
   border: none;
 }
 
-/* .Make_Sure {
+.inputs {
+  width: 80%;
+}
+
+.Make_Sure {
   display: flex;
   justify-content: flex-start;
   padding-left: 10%;
-} */
+}
 
 input[type="submit"]{
   background: #9C4B00;
@@ -78,7 +82,7 @@ input[type="submit"]{
 #footer{
   background: #9C4B00;
   padding-bottom: 1px;
-
+  line-height: 8px;
 }
 #logo-up{
   margin: 0 auto;
@@ -91,4 +95,68 @@ input[type="submit"]{
   width: 15%;
   display: flex;
   justify-content: space-around;
+}
+#footer p {
+  text-align: center;
+  margin-top: 15px;
+  color: black;
+}
+
+
+@media screen and (max-width: 540px ) {
+  
+  #subscribe {
+    width: 80%;
+  }
+  
+}
+@media screen and (max-width: 540px ) {
+  #header-paragraph{
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    color:#9C4B00;
+  } 
+  #header {
+    height: 35em;
+  }
+  #logo-up{
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+  }
+  #insta {
+    margin: 15px 15px 0 0;
+    color: black;
+  }
+  #face {
+    margin: 15px 0 0 15px;
+    color: black;
+  } 
+   
+
+}
+
+@media screen and (max-width: 340px ) {
+  #header-paragraph{
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    color:#9C4B00;
+  }
+  div ul li a b{
+    font-size: 18px;
+  }
+  #logo-up{
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+  }
+  #footer p{
+    font-size: 13px;
+  }
+  
+  
 }

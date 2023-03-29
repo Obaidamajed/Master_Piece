@@ -52,8 +52,6 @@ div ul li a b{
 }
 #core-img{
   display: flex;
-  /* flex-direction: row; */
-  /* flex-wrap: wrap; */
   justify-content: space-around;
 }
 .paragraph{
@@ -107,6 +105,7 @@ input[type="submit"]{
 #footer{
   background: #9C4B00;
   padding-bottom: 1px;
+  line-height: 8px;
 }
 #logo-up{
   margin: 0 auto;
@@ -121,6 +120,11 @@ input[type="submit"]{
   justify-content: space-around;
 }
 
+#footer p {
+  text-align: center;
+  margin-top: 15px;
+  color: black;
+}
 @media screen and (max-width: 740px ) {
   .box{
     padding: 3px;
@@ -128,6 +132,19 @@ input[type="submit"]{
 }
 
 @media screen and (max-width: 540px ) {
+  #header-paragraph{
+    position: absolute;
+    right: 35%;
+    top: 50%;
+    color:#9C4B00;
+  }
+  #header {
+    height: 35em;
+  }
+  #core-img img {
+    width: 150px;
+    height: 150px;
+  }
   #table1,#table2 {
     width: 96%;
   }
@@ -140,26 +157,19 @@ input[type="submit"]{
     grid-auto-rows: minmax(100px,auto);
     grid-gap: 8px 25px;
   }
-  #insta,#face {
-    margin: 0 15px;
-  }
-  #core-img img {
-    width: 150px;
-    height: 150px;
-  }
-  #header-paragraph{
-    position: absolute;
-    right: 35%;
-    top: 50%;
-    /* transform: translate(-50%,-50%); */
-    color:#9C4B00;
-  }
   #logo-up{
     margin: 0 auto;
     width: 70%;
     display: flex;
     justify-content: space-around;
   }
+  #insta {
+    margin: 15px 15px 0 0 ;
+  }
+  #face {
+    margin: 15px 0 0 15px ;
+  }
+ 
 }
 
 @media screen and (max-width: 340px ) {
@@ -171,5 +181,18 @@ input[type="submit"]{
     width: 80%;
     display: flex;
     justify-content: space-around;
+  }
+  #core-img img {
+    width: 100px;
+    height: 100px;
+  }
+  #header-paragraph{
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    color:#9C4B00;
+  }
+  div ul li a b{
+    font-size: 20px;
   }
 }
