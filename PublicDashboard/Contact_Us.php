@@ -58,7 +58,7 @@
           </div>
         </nav>
       
-        <h1 id="header-paragraph">CONTACT US</h1>
+        <h1 id="header-paragraph">CONTACT_US</h1>
         
       </div>
 
@@ -101,26 +101,26 @@ if(isset($_POST['submit'])){
 
 ?>
 
-<!-- Start For Error  -->
-<?php if($error) : ?>
-  <h5 class="alert alert-danger text-center"><?php echo $error; ?></h5>
-<?php endif; ?>
-<!-- End For Error  -->
-  
-<!-- Start For Correct Insert in DataBase  -->
-<?php if($success) : ?>
-  <h5 class="alert alert-success text-center"> <?php echo $success ;?></h5>
-<?php endif; ?>
-<!-- End For Correct Insert in DataBase  -->
+    <!-- Start For Error  -->
+    <?php if($error) : ?>
+      <h5 class="alert alert-danger text-center"><?php echo $error; ?></h5>
+    <?php endif; ?>
+    <!-- End For Error  -->
+      
+    <!-- Start For Correct Insert in DataBase  -->
+    <?php if($success) : ?>
+      <h5 class="alert alert-success text-center"> <?php echo $success ;?></h5>
+    <?php endif; ?>
+    <!-- End For Correct Insert in DataBase  -->
     <br><br>
     <div id="contact_us-core">
 
 
       <div id="left">
-        <p style="font-size: 30px;" id="connect_with_us"><b>Connect with us</b></p>
-        <p><img width="30px"height="30px" src="images/Contact-Us/house-icon.png" alt="Our-city">&nbsp; Aqaba</p>
-        <p><img width="38px"height="38px" src="images/Contact-Us/location icon.png" alt="Our-location"> Future Academy in Aqaba</p>
-        <p><img width="30px"height="30px" src="images/Contact-Us/message-icon.png" alt="Our-email"> FutureAcademy@gmail.com</p>
+        <p id="connect_with_us"><b>Connect with us</b></p>
+        <p class="Connect-left"><img width="30px"height="30px" src="images/Contact-Us/house-icon.png" alt="Our-city">&nbsp; Aqaba</p>
+        <p class="Connect-left"><img width="38px"height="38px" src="images/Contact-Us/location icon.png" alt="Our-location"> Future Academy in Aqaba</p>
+        <p class="Connect-left"><img width="30px"height="30px" src="images/Contact-Us/message-icon.png" alt="Our-email"> FutureAcademy@gmail.com</p>
       </div>
 
       <div id="right">
@@ -134,14 +134,15 @@ if(isset($_POST['submit'])){
           <input type="submit" name="submit" value="Submit"  id="submit" >
 
         </form>
-
       </div>
+
+
     </div>
     <br><br>
   </div>
 
   <!-- Footer  -->
-  <div id="footer" style= "line-height: 8px">
+  <div id="footer">
     <br>
     <!-- FA & JFA Logos  -->
     <div id="logo-up">
@@ -150,11 +151,11 @@ if(isset($_POST['submit'])){
     </div>
     <!-- Social Media Logos -->
     <div id="logo-down">
-      <a href="https://www.instagram.com/alfaisalyscjo/" target="_blank" style="color: black;"><i class="fa-brands fa-instagram fa-2x"></i></a> 
-      <a href="https://ar-ar.facebook.com/ALFAISALYSCJO/" target="_blank" style="color: black;"><i class="fa-brands fa-square-facebook fa-2x"></i></a> 
+      <a id="insta" href="https://www.instagram.com/alfaisalyscjo/" target="_blank" style="color: black;"><i class="fa-brands fa-instagram fa-2x"></i></a> 
+      <a id="face" href="https://ar-ar.facebook.com/ALFAISALYSCJO/" target="_blank" style="color: black;"><i class="fa-brands fa-square-facebook fa-2x"></i></a> 
     </div>
     <br>
-    <p style="text-align: center; color: black; margin-top: 20px">© 2023 Future Academy. all rights are save.</p>
+    <p>© 2023 Future Academy. all rights are save.</p>
   </div>
 
 

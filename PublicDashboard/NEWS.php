@@ -56,7 +56,7 @@
         </div>
       </nav>
     
-      <h1 id="header-paragraph">FA NEWS</h1>
+      <h1 id="header-paragraph">NEWS</h1>
       
     </div>
     <!-- Container  -->
@@ -69,20 +69,20 @@
       ?>
 
       <div id="News-Core">
-      <br>
+        <br>
         <?php if(mysqli_num_rows($result) > 0): ?> 
           <?php while($row = mysqli_fetch_assoc($result)): ?>
               <br>
-              <div id="box1">
+              <div id="box">
                 <?php if($row['Photo']) { ?>
-                <div id="box1-img">
-                  <img width="200px" height="200px" src="../AdminDashboard/News/News's_Image/<?php echo $row['Photo']; ?>" alt="<?php echo $row['Photo']; ?>">
+                <div id="box-img">
+                  <img src="../AdminDashboard/News/News's_Image/<?php echo $row['Photo']; ?>" alt="<?php echo $row['Photo']; ?>">
                 </div>
                 <?php } ?>
-                <div id="box1-paragraph">
+                <div id="box-paragraph">
                   <p>
                     <h4><b><?php echo $row['Main_title']; ?></b>
-                    </h4><br>
+                    </h4>
                     <?php echo $row['Description']; ?>
                   </p>
                 </div>
@@ -93,10 +93,10 @@
         <br>
       </div>
 
-  </div>
+    </div>
 
     <!-- Footer  -->
-  <div id="footer" style= "line-height: 8px">
+  <div id="footer">
     <br>
     <!-- FA & JFA Logos  -->
     <div id="logo-up">
@@ -105,11 +105,11 @@
     </div>
     <!-- Social Media Logos -->
     <div id="logo-down">
-      <a href="https://www.instagram.com/alfaisalyscjo/" target="_blank" style="color: black;"><i class="fa-brands fa-instagram fa-2x"></i></a> 
-      <a href="https://ar-ar.facebook.com/ALFAISALYSCJO/" target="_blank" style="color: black;"><i class="fa-brands fa-square-facebook fa-2x"></i></a> 
+      <a id="insta" href="https://www.instagram.com/alfaisalyscjo/" target="_blank" style="color: black;"><i class="fa-brands fa-instagram fa-2x"></i></a> 
+      <a id="face" href="https://ar-ar.facebook.com/ALFAISALYSCJO/" target="_blank" style="color: black;"><i class="fa-brands fa-square-facebook fa-2x"></i></a> 
     </div>
     <br>
-    <p style="text-align: center; color: black; margin-top: 20px">© 2023 Future Academy. all rights are save.</p>
+    <p>© 2023 Future Academy. all rights are save.</p>
   </div>
 
 

@@ -173,6 +173,19 @@ input[type="submit"]{
 }
 
 @media screen and (max-width: 340px ) {
+  #header-paragraph{
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    color:#9C4B00;
+  }
+  div ul li a b{
+    font-size: 16px;
+  }
+  #core-img img {
+    width: 100px;
+    height: 100px;
+  }
   #footer p{
     font-size: 13px;
   }
@@ -182,17 +195,6 @@ input[type="submit"]{
     display: flex;
     justify-content: space-around;
   }
-  #core-img img {
-    width: 100px;
-    height: 100px;
-  }
-  #header-paragraph{
-    position: absolute;
-    right: 50%;
-    top: 50%;
-    color:#9C4B00;
-  }
-  div ul li a b{
-    font-size: 20px;
-  }
+  
+  
 }

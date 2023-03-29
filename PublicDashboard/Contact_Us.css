@@ -96,13 +96,14 @@ form input[type="submit"]:hover{
   margin-top: 5em;
 }
 #connect_with_us{
+  font-size: 30px;
   margin-bottom: 1em;
 }
 
 #footer{
   background: #9C4B00;
   padding-bottom: 1px;
-
+  line-height: 8px;
 }
 #logo-up{
   margin: 0 auto;
@@ -116,16 +117,90 @@ form input[type="submit"]:hover{
   display: flex;
   justify-content: space-around;
 }
+#footer p {
+  text-align: center;
+  margin-top: 15px;
+  color: black;
+}
 
-#insta {
+@media screen and (max-width: 540px ) {
+  #header {
+    height: 35em;
+  }
+  #contact_us-core{
+    width: 96%;
+  }
+  #left{
+    width: 45%;
+  }
+  #right{
+    width: 45%;
+  }
+  #logo-up{
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+  }
+  #insta {
     margin: 15px 15px 0 0;
     color: black;
   }
-  
-#face {
+  #face {
     margin: 15px 0 0 15px;
     color: black;
   }
-  #footer p {
-    color: red;
+}
+
+@media screen and (max-width: 420px ) {
+  #header-paragraph{
+    position: absolute;
+    right: 30%;
+    top: 50%;
+    color:#9C4B00;
   }
+  div ul li a b{
+    font-size: 20px;
+  }
+  #contact_us-core{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -6em;
+  }
+  .Connect-left img{
+    display: inline;
+  }
+  #left{
+    width: 85%;
+    margin-bottom: 1em;
+  }
+  #right{
+    width: 85%;
+  }
+}
+@media screen and (max-width: 340px ) {
+  #header-paragraph{
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    color:#9C4B00;
+    font-size: 20px;
+  }
+  div ul li a b{
+    font-size: 16px;
+  }
+  .Connect-left{
+    font-size: 14px;
+  }
+  #footer p{
+    font-size: 13px;
+  }
+  #logo-up{
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+}

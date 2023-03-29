@@ -104,21 +104,17 @@ input[type="submit"]{
 
 
 @media screen and (max-width: 540px ) {
-  
-  #subscribe {
-    width: 80%;
-  }
-  
-}
-@media screen and (max-width: 540px ) {
-  #header-paragraph{
+  /* #header-paragraph{
     position: absolute;
     right: 50%;
     top: 50%;
     color:#9C4B00;
-  } 
+  }  */
   #header {
     height: 35em;
+  }
+  #subscribe {
+    width: 80%;
   }
   #logo-up{
     margin: 0 auto;
@@ -146,7 +142,7 @@ input[type="submit"]{
     color:#9C4B00;
   }
   div ul li a b{
-    font-size: 18px;
+    font-size: 16px;
   }
   #logo-up{
     margin: 0 auto;

@@ -125,6 +125,15 @@ div ul{
 }
 
 @media screen and (max-width: 340px ) {
+  #header-paragraph{
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    color:#9C4B00;
+  }
+  div ul li a b{
+    font-size: 16px;
+  }
   #footer p{
     font-size: 13px;
   }
@@ -134,14 +143,6 @@ div ul{
     display: flex;
     justify-content: space-around;
   }
-  #header-paragraph{
-    position: absolute;
-    right: 50%;
-    top: 50%;
-    color:#9C4B00;
-  }
-  div ul li a b{
-    font-size: 20px;
-  }
+  
 }
 
