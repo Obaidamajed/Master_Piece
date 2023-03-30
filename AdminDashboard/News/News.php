@@ -1,6 +1,6 @@
 <?php  include('../Includes/header.php'); ?>
 
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #010124;">
+    <nav id="nav-news" class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="News.php">News</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -35,37 +35,35 @@
         $result = mysqli_query($conn,$sql); 
     ?>
 
-    <h1 class="text-center col-12 py-3 text-white my-2"style="background-color: #010124;">All News</h1>
+    <h1 id="title-news">All News</h1>
     <div class="row">
         <div class="col-sm-12">
-            <table class="table">
+            <table id="table-news" class="table">
                 <thead>
                     <tr>
-                    <th scope="col">Id </th>
-                    <th scope="col">Photo</th>
-                    <th scope="col">Main_title</th>
-                    <th scope="col">Description</th>
-                    <th scope="col">Edit</th>
-                    <th scope="col">Delete</th>
+                        <th scope="col">#</th>
+                        <th scope="col">Photo</th>
+                        <th scope="col">Main_title</th>
+                        <th scope="col">Description</th>
+                        <th id="action-news" scope="col">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
 
                 <?php if(mysqli_num_rows($result) > 0): ?> 
+                    <?php $num = 1; ?>
                     <?php while($row = mysqli_fetch_assoc($result)): ?>
                         <tr>
-                            <td><?php echo $row['Id']; ?></td>
-                            <td><?php echo $row['Photo']; ?></td>
-                            <td style="max-width:400px;" ><?php echo $row['Main_title']; ?></td>
-                            <td style="max-width:400px;" ><?php echo $row['Description']; ?></td>
-                            <td>
-                                <a class="btn btn-info" href="editNews.php?id=<?php echo $row['Id']; ?>"> <i class="fa fa-edit"></i> </a>
-                                <!-- ?id=<?php echo $row['Id']; ?> بهاي الطريقة ببعث الآي دي لخاص بالعنصر اللي ضغطت عليه على صفحة الإيديت -->
-                            </td>
-                            <td>
-                                <a class="btn btn-danger" href="deleteNews.php?id=<?php echo $row['Id']; ?>"> <i class="fa fa-close"></i> </a>
+                            <td><?php echo $num; ?></td>
+                            <td><img width="200px" src="News's_Image/<?php echo $row['Photo']; ?>" alt="<?php echo $row['Photo']; ?>"></td>
+                            <td id="Main-title-news"><?php echo $row['Main_title']; ?></td>
+                            <td id="descr-news"  ><?php echo $row['Description']; ?></td>
+                            <td id="action-icons-news">
+                            <div id="edit-icon-news">Edit</div><a class="btn btn-info" href="editNews.php?id=<?php echo $row['Id']; ?>"> <i class="fa fa-edit"></i> </a><br><br>
+                            <div id="delete-icon-news">Delete</div><a class="btn btn-danger" href="deleteNews.php?id=<?php echo $row['Id']; ?>"> <i class="fa fa-close"></i> </a>
                             </td>
                         </tr>
+                        <?php ++$num ?>
                     <?php endwhile; ?>
                 <?php endif; ?>
 

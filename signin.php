@@ -75,12 +75,12 @@
 
                 }
                 else {
-                    $error = "Please Type Valid Email"; // this action gives error if i entered correct password but un-correct email
+                    $error = "Please Type Valid Email"; // this action gives error if i entered correct password ( between 1 and 20 charachters ) but un-correct email
                 }
                 // End 3rd condition
             }
             else {
-                $error = "Password Must Be Less Than 20 Characters"; // // this action gives error if i entered correct email but un-correct password
+                $error = "Password Must Be Less Than 20 Characters"; // // this action gives error if i entered email that wrote correctly but un-correct password ( more than 20 Characters )
             }
             // End 2nd condition
             

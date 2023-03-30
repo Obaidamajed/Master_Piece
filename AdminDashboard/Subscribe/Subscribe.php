@@ -1,6 +1,6 @@
 <?php  include('../Includes/header.php'); ?>
 
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #010124;">
+    <nav id="nav-Subscribe" class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="Subscribe.php">Subscribers</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -35,44 +35,42 @@
         $result = mysqli_query($conn,$sql); 
     ?>
 
-    <h1 class="text-center col-12 py-3 text-white my-2"style="background-color: #010124;">All Subscribers</h1>
+    <h1 id="title-Subscribe">All Subscribers</h1>
     <div class="row">
         <div class="col-sm-12">
-            <table class="table">
+            <table id="table-Subscribe" class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Id </th>
+                        <th scope="col">#</th>
                         <th scope="col">Full_Name</th>
-                        <th scope="col">Email</th>
                         <th scope="col">Phone</th>
                         <th scope="col">Date</th>
+                        <th scope="col">Email</th>
                         <th scope="col">Size</th>
-                        <th scope="col">Message</th>
-                        <th scope="col">Edit</th>
-                        <th scope="col">Delete</th>
+                        <th id="action-subscribe" scope="col">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
 
                 <?php if(mysqli_num_rows($result) > 0): ?> 
+                    <?php $num = 1; ?>
                     <?php while($row = mysqli_fetch_assoc($result)): ?>
                         <tr>
-                            <td style="max-width:2.5em; overflow-y: hidden"><?php echo $row['Id']; ?></td>
-                            <td style="max-width:2.5em; overflow-y: hidden"><?php echo $row['Full_Name']; ?></td>
-                            <td style="max-width:2.5em; overflow-y: hidden"><?php echo $row['Email']; ?></td>
-                            <td style="max-width:2.5em; overflow-y: hidden"><?php echo $row['Phone']; ?></td>
-                            <td style="max-width:2.5em; overflow-y: hidden"><?php echo $row['Day'] . "\\" .  $row['Month'] . "\\" .  $row['Year']; ?></td>
+                            <td><?php echo $num;?></td>
+                            <td><?php echo $row['Full_Name']; ?></td>
+                            <td><?php echo $row['Phone']; ?></td>
+                            <td><?php echo $row['Day'] . "\\" .  $row['Month'] . "\\" .  $row['Year']; ?></td>
+                            <td><?php echo $row['Email']; ?></td>
                             <!-- <td style="max-width:2em; overflow-y: hidden"><?php echo $row['Month']; ?></td>
                             <td style="max-width:2em; overflow-y: hidden"><?php echo $row['Year']; ?></td> -->
-                            <td style="max-width:2.5em; overflow-y: hidden"><?php echo $row['Size']; ?></td>
-                            <td style="max-width:2.5em; overflow-y: hidden" style="max-width:300px;"><?php echo $row['Message']; ?></td>
-                            <td style="max-width:2.5em; overflow-y: hidden">
-                                <a class="btn btn-info" href="editSubscriber.php?id=<?php echo $row['Id']; ?>"> <i class="fa fa-edit"></i> </a>
-                            </td>
-                            <td style="max-width:2.5em; overflow-y: hidden">
-                                <a class="btn btn-danger" href="deleteSubscriber.php?id=<?php echo $row['Id']; ?>"> <i class="fa fa-close"></i> </a>
+                            <td><?php echo $row['Size']; ?></td>
+                            <!-- <td style="max-width:300px;"><?php echo $row['Message']; ?></td> -->
+                            <td id="action-icons-subscriber">
+                                <div id="edit-icon-subscriber">Edit</div><a class="btn btn-info" href="editSubscriber.php?id=<?php echo $row['Id']; ?>"> <i class="fa fa-edit"></i> </a><br><br>
+                                <div id="delete-icon-subscriber">Delete</div><a class="btn btn-danger" href="deleteSubscriber.php?id=<?php echo $row['Id']; ?>"> <i class="fa fa-close"></i> </a>
                             </td>
                         </tr>
+                        <?php $num++ ?>
                     <?php endwhile; ?>
                 <?php endif; ?>
 

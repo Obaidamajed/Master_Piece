@@ -53,7 +53,7 @@ function maxInput($value,$max) {
 // validate email 
 
 function validEmail($email) {
-  if(filter_var($email, FILTER_VALIDATE_EMAIL)) { // بفحص اذا الإيميل مكتوب بشكل صحيح أم لا
+  if(filter_var($email, FILTER_VALIDATE_EMAIL)) { // Check if email is wrote correctly or not
     return true;
   }
   return false;

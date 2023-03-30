@@ -74,19 +74,19 @@
           $Month = $_POST['Month'] ;
           $Year = $_POST['Year'] ;
           $Size = $_POST['Size'] ;
-          $message = santString($_POST['message']) ;
+          // $message = santString($_POST['message']) ;
 
           // Start 1st condition for submit fill required fields
           if(requiredInput($name) && requiredInput($number) && requiredInput($Day) && requiredInput($Month) && requiredInput($Year)) {
             // Start 2nd condition
-            if(minInput($name,3) && maxInput($number,10) && maxInput($message,250)) {
+            if(minInput($name,3) && maxInput($number,10)) {
                 // Start 3rd condition 
                 if(Day($Day) && Month($Month) && Year($Year)){
                   // Start 4th condition 
                   if(Size($Size)) {
 
                       // Start Create In DataBase
-                      $sql = "INSERT INTO `subscribe` (`Full_Name`, `Email`, `Phone`, `Day`, `Month`, `Year`, `Size`, `Message`) VALUES('$name' , '$email', '$number', '$Day', '$Month', '$Year', '$Size', '$message' ) "; // جملة الكويري 
+                      $sql = "INSERT INTO `subscribe` (`Full_Name`, `Email`, `Phone`, `Day`, `Month`, `Year`, `Size`) VALUES('$name' , '$email', '$number', '$Day', '$Month', '$Year', '$Size' ) "; 
                       $result = mysqli_query($conn, $sql); 
                       // End Create In DataBase
 
@@ -108,7 +108,7 @@
                 // End 3rd condition 
             }
             else {
-                $error = "Name Must Be Greate Than 3 Characters & Password Must Be Less Than 11 Characters & Message Must Be Less Than 251 Characters";
+                $error = "Name Must Be Greate Than 3 Characters & Phone number Must Be Less Than 11 Characters";
             }
             // End 2nd condition
           }
@@ -158,7 +158,7 @@
           <p class="Make_Sure"> <input required type="checkbox">&nbsp; A valid Jordanian health insurance </p>
           <p class="Make_Sure"> <input required type="checkbox">&nbsp; You does not suffer from any health problems </p>
 
-          <textarea rows="5" cols="50" style="width: 80%; margin: 0 auto" class="form-control" type="text" name="message" placeholder="Message"></textarea><br><br>
+          <!-- <textarea rows="5" cols="50" style="width: 80%; margin: 0 auto" class="form-control" type="text" name="message" placeholder="Message"></textarea><br><br> -->
 
           <input type="submit" value="Submit" name="submit" placeholder="Submit"><br><br>
           

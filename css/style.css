@@ -1,0 +1,432 @@
+/* AdminDashboard:  */
+
+/*  index.php  */
+#nav-Home {
+    background-color: #010124;
+}
+.text-center {
+    background-color: #010124;
+}
+.text-center b {
+    color: #9c4b00;
+}
+
+
+@media screen and (max-width: 420px ) {
+    .text-center {
+        font-size: 35px;
+    }
+  }
+@media screen and (max-width: 300px ) {
+    #nav-Home {
+        width: 110vw;
+    }
+    .text-center {
+        font-size: 24px;
+        margin-left: 15px;
+    }
+    #table-home {
+        margin-left: -12px;
+    }
+  }
+
+/* Coaches.php  */
+#nav-coaches {
+    background-color: #010124;
+}
+#title-coaches {
+    background-color: #010124;
+    color: #fff;
+    margin-top: 10px;
+    padding: 15px;
+    text-align: center;
+}
+#action-icons-coaches {
+    text-align: end;
+    padding-top: 30px;
+}
+#action-coaches {
+    text-align: end;
+}
+#edit-icon-coach {
+    margin-right: 8px;
+}
+#delete-icon-coach {
+    margin-right: -3px;
+}
+#img-coach {
+    width: 200px;
+}
+
+
+
+@media screen and (max-width: 540px ) {
+    #nav-coaches {
+        width: 100vw;
+    }
+    #img-coach {
+        width: 145px;
+    }
+    #action-icons-coaches {
+        padding-top: 5px;
+    }
+  }
+
+@media screen and (max-width: 420px ) {
+    #nav-coaches {
+        width: 119.5vw;
+    }
+    #title-coaches {
+        width: 112vw;
+    }
+    #img-coach {
+        width: 140px;
+    }
+    #action-icons-coaches {
+        padding-top: 0px;
+    }
+  }
+@media screen and (max-width: 394px ) {
+    #nav-coaches {
+        width: 123vw;
+    }
+    #title-coaches {
+        width: 116vw;
+    }
+    #img-coach {
+        width: 130px;
+    }
+    #table-coaches {
+        margin-left: -7.5px;
+    } 
+    #action-icons-coaches {
+       font-size: 13px;
+    }
+    #edit-icon-coach {
+        margin-right: 10px;
+    }
+    #delete-icon-coach {
+        margin-right: 0px;
+    }
+  }
+@media screen and (max-width: 376px ) {
+    #nav-coaches {
+        width: 128vw;
+    }
+    #title-coaches {
+        width: 120vw;
+    }
+  }
+@media screen and (max-width: 360px ) {
+    #nav-coaches {
+        width: 133vw;
+    }
+    #title-coaches {
+        width: 124vw;
+    }
+  }
+@media screen and (max-width: 280px ) {
+    #nav-coaches {
+        width: 168vw;
+    }
+    #title-coaches {
+        width: 159vw;
+    }
+  }
+
+  /* News.php  */
+#nav-news {
+    background-color: #010124;
+}
+#title-news {
+    background-color: #010124;
+    color: #fff;
+    margin-top: 10px;
+    padding: 15px;
+    text-align: center;
+}
+#Main-title-news {
+    min-width: 300px;
+}
+#table-news tbody tr #descr-news {
+    min-width: 300px;
+}
+#table-news tbody tr #Main-title-news {
+    min-width: 300px;
+}
+
+#action-icons-news {
+    text-align: end;
+}
+#action-news {
+    text-align: end;
+}
+#edit-icon-news {
+    margin-right: 8px;
+}
+#delete-icon-news {
+    margin-right: -3px;
+}
+@media screen and (max-width: 1200px ) {
+    #nav-news {
+        width: 100vw;
+    }
+    #title-news {
+        width: 97.3vw;
+    }
+  }
+@media screen and (max-width: 920px ) {
+    #nav-news {
+        width: 103.5vw;
+    }
+    #title-news {
+        width: 100vw;
+    }
+    #table-news {
+        margin-left: -11px;
+    } 
+  }
+@media screen and (max-width: 820px ) {
+    #nav-news {
+        width: 114.5vw;
+    }
+    #title-news {
+        width: 110.5vw;
+    }
+    #table-news {
+        margin-left: -13px;
+    } 
+  }
+@media screen and (max-width: 770px ) {
+    #nav-news {
+        width: 122vw;
+    }
+    #title-news {
+        width: 117.5vw;
+    }
+    #table-news {
+        margin-left: -15px;
+    } 
+  }
+@media screen and (max-width: 540px ) {
+    #nav-news {
+        width: 173.5vw;
+    }
+    #title-news {
+        width: 167.5vw;
+    }
+  }
+@media screen and (max-width: 440px ) {
+    #nav-news {
+        width: 226.5vw;
+    }
+    #title-news {
+        width: 218.5vw;
+    }
+  }
+@media screen and (max-width: 394px ) {
+    #nav-news {
+        width: 237.5vw;
+    }
+    #title-news {
+        width: 230vw;
+    }
+  }
+@media screen and (max-width: 391px ) {
+    #nav-news {
+        width: 240vw;
+    }
+    #title-news {
+        width: 233.5vw;
+    }
+  }
+@media screen and (max-width: 376px ) {
+    #nav-news {
+        width: 250vw;
+    }
+    #title-news {
+        width: 243.5vw;
+    }
+  }
+@media screen and (max-width: 361px ) {
+    #nav-news {
+        width: 259vw;
+    }
+    #title-news {
+        width: 251vw;
+    }
+  }
+@media screen and (max-width: 281px ) {
+    #nav-news {
+        width: 333.5vw;
+    }
+    #title-news {
+        width: 323vw;
+    }
+  }
+
+  /* Contact_Us.php  */
+
+#nav-Contact {
+    background-color: #010124;
+}
+#title-Contact {
+    background-color: #010124;
+    color: #fff;
+    margin-top: 10px;
+    padding: 15px;
+    text-align: center;
+}
+@media screen and (max-width: 420px ) {
+    #nav-Contact {
+        width: 124.5vw;
+    }
+    #title-Contact {
+        width: 117.5vw;
+    }
+    #table-Contact {
+        margin-left: -9px;
+    } 
+  }
+@media screen and (max-width: 394px ) {
+    #nav-Contact {
+        width: 129.5vw;
+    }
+    #title-Contact {
+        width: 121.5vw;
+    }
+    #table-Contact {
+        margin-left: -11px;
+    } 
+  }
+@media screen and (max-width: 376px ) {
+    #nav-Contact {
+        width: 135vw;
+    }
+    #title-Contact {
+        width: 127.5vw;
+    }
+    #table-Contact {
+        margin-left: -13px;
+    } 
+  }
+@media screen and (max-width: 360px ) {
+    #nav-Contact {
+        width: 139.5vw;
+    }
+    #title-Contact {
+        width: 131vw;
+    }
+    #table-Contact {
+        margin-left: -15px;
+    } 
+  }
+
+@media screen and (max-width: 280px ) {
+    #nav-Contact {
+        width: 179.5vw;
+    }
+    #title-Contact {
+        width: 168.5vw;
+    }
+    #table-Contact {
+        margin-left: -15px;
+    } 
+  }
+
+  /* Subscribe.php  */
+
+#nav-Subscribe {
+    background-color: #010124;
+}
+#title-Subscribe {
+    background-color: #010124;
+    color: #fff;
+    margin-top: 10px;
+    padding: 15px;
+    text-align: center;
+}
+#edit-icon-subscriber {
+    margin-right: 8px;
+}
+#delete-icon-subscriber {
+    margin-right: -3px;
+}
+#action-icons-subscriber {
+    text-align: end;
+}
+#action-subscribe {
+    text-align: end;
+}
+
+@media screen and (max-width: 770px ) {
+    #nav-Subscribe {
+        width: 101.5vw;
+    }
+    #title-Subscribe {
+        width: 97.5vw;
+    }
+  }
+@media screen and (max-width: 540px ) {
+    #nav-Subscribe {
+        width: 132.5vw;
+    }
+    #title-Subscribe {
+        width: 126.5vw;
+    }
+  }
+@media screen and (max-width: 420px ) {
+    #nav-Subscribe {
+        width: 166.5vw;
+    }
+    #title-Subscribe {
+        width: 159.5vw;
+    }
+  }
+@media screen and (max-width: 394px ) {
+    #nav-Subscribe {
+        width: 175vw;
+    }
+    #title-Subscribe {
+        width: 168vw;
+    }
+  }
+@media screen and (max-width: 391px ) {
+    #nav-Subscribe {
+        width: 176.5vw;
+    }
+    #title-Subscribe {
+        width: 168.5vw;
+    }
+  }
+@media screen and (max-width: 376px ) {
+    #nav-Subscribe {
+        width: 180vw;
+    }
+    #title-Subscribe {
+        width: 172.5vw;
+    }
+    #table-Subscribe {
+        margin-left: -14px;
+    } 
+  }
+@media screen and (max-width: 360px ) {
+    #nav-Subscribe {
+        width: 187vw;
+    }
+    #title-Subscribe {
+        width: 177.5vw;
+    }
+    #table-Subscribe {
+        margin-left: -14px;
+    } 
+  }
+@media screen and (max-width: 280px ) {
+    #nav-Subscribe {
+        width: 240.5vw;
+    }
+    #title-Subscribe {
+        width: 228.5vw;
+    }
+  }
+

@@ -1,4 +1,25 @@
-<?php  include('Includes/header.php'); ?>
+<?php include('Includes/db.php'); ?>
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <style>
+            <?php
+            $css = file_get_contents('../css/style.css');
+            echo $css;
+            ?>
+        </style>
+        <!-- Fontawesome  -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+
+        <title>Dashboard FA.</title>
+    </head>
+    <body>
 
 <!--Start ** This Code to prevent users entering into AdminDashboard -->
     <?php if(!isset($_GET['id']) or !is_numeric($_GET['id'])) {
@@ -14,7 +35,7 @@
     ?>
 <!--End ** This Code to prevent users entering into AdminDashboard -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #010124;">
+    <nav id="nav-Home" class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="index.php?id=<?php echo $_GET['id'] ?>">Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -51,10 +72,10 @@
         // $conn exist in db.php 
     ?>
 
-    <h1 class="text-center col-12 py-3 text-white my-2" style="background-color: #010124;">All users <b style="color: #9c4b00;">( Admins )</b></h1>
+    <h1 class="text-center col-12 py-3 text-white my-2"> All users <b>( Admins ) </b> </h1>
     <div class="row">
         <div class="col-sm-12">
-            <table class="table">
+            <table id="table-home" class="table">
                 <thead>
                     <tr>
                     <th style="width:35%" scope="col">Id </th>
@@ -94,7 +115,12 @@
             </table>
         </div>
     </div>
-</div>
 
-<?php  include('Includes/footer.php'); ?>
+<!-- Footer part  -->
+</div>
+        <!-- For Dropdown navbar  -->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
 
