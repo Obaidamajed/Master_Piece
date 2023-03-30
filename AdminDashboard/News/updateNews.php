@@ -6,6 +6,7 @@
     if(isset($_POST['submit'])){
         $title =     santString($_POST['title']) ; 
         $description =    santString($_POST['description']) ;
+
         // Start For Photo
         $main_pic= $_FILES['pic'];
         $filename = $_FILES["pic"]["name"];
@@ -14,21 +15,41 @@
         $folder = "./News's_Image/" . $filename;
         move_uploaded_file($tempname, $folder);
         // End For Photo
+
         if(requiredInput($title) && requiredInput($description)) {
+            if (strlen($filename) > 0){
+                if(maxInput($title,100) && maxInput($description,200)) {
+                    $id = $_POST['id'];
 
-                $id = $_POST['id'];
+                    $sql = "UPDATE `news` SET `Photo`='$filename', `Main_title`='$title', `Description`='$description' WHERE `Id`='$id' ";
+                    $result = mysqli_query($conn, $sql); 
+                
+                    if ( $result ) {
+                        $success = "Updated Successfully";
+                        header("refresh:3;url=News.php"); 
+                    }
+                }else {
+                $error = "Title Must be less than 100 Characters & Description Must be less than 200 Charachters";
+                }
+            }else {
+                if(maxInput($title,100) && maxInput($description,250)) {
+                    $id = $_POST['id'];
 
-                $sql = "UPDATE `news` SET `Photo`='$filename', `Main_title`='$title', `Description`='$description' WHERE `Id`='$id' ";
-                $result = mysqli_query($conn, $sql); 
-              
-                if ( $result ) {
-                    $success = "Updated Successfully";
-                    header("refresh:3;url=News.php"); 
+                    $sql = "UPDATE `news` SET `Photo`='$filename', `Main_title`='$title', `Description`='$description' WHERE `Id`='$id' ";
+                    $result = mysqli_query($conn, $sql); 
+                
+                    if ( $result ) {
+                        $success = "Updated Successfully";
+                        header("refresh:3;url=News.php"); 
+                    }
+                }else {
+                $error = "Title Must be less than 100 Characters & Description Must be less than 250 Charachters";
                 }
             }
-            else {
-                $error = "Please Fill All Fields"; 
-            }
+        }
+        else {
+            $error = "Please Fill All Fields"; 
+        }
         }
 
 ?>

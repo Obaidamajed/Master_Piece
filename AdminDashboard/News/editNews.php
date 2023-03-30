@@ -21,18 +21,18 @@
             
             <div class="form-group">
                 <label for="exampleInputPhoto1">Photo</label>
-                <input required type="file" name="pic" value="<?php echo $row['Photo'] ?>" class="form-control" id="exampleInputphoto1">
+                <input type="file" name="pic" class="form-control" id="exampleInputphoto1">
             </div>
 
             <div class="form-group">
                 <label for="exampleInputName1">Main_title</label>
-                <textarea  rows="10" cols="50" type="text" name="title" value="<?php echo $row['Main_title'] ?>"  class="form-control" id="exampleInputName1" ></textarea>
+                <input  style="height:150px" type="text" name="title" value="<?php echo $row['Main_title'] ?>"  class="form-control" id="exampleInputName1" ></input>
                 <input type="hidden" value="<?php echo $id; ?>" name="id">
             </div>
 
             <div class="form-group">
                 <label for="exampleInputcategory1">Description</label>
-                <textarea  rows="10" cols="50" type="text" name="description" value="<?php echo $row['Description'] ?>"  class="form-control" id="exampleInputName1" ></textarea>
+                <input  style="height:150px" type="text" name="description" value="<?php echo $row['Description'] ?>"  class="form-control" id="exampleInputName1" ></input>
             </div>
         
             <button type="submit" class="btn btn-primary" name="submit">Submit</button>

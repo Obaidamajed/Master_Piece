@@ -52,7 +52,6 @@ div ul{
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-auto-rows: (200px,auto);
-  /* grid-gap: 10px; */
   background: #00004f;
   padding: 15px ;
 }
@@ -92,7 +91,7 @@ div ul{
     flex-direction: column;
   }
   #coaches-core div img{
-    width: 50%;
+    width: 80%;
     height: 30%;
   }
 }

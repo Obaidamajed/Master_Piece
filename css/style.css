@@ -157,6 +157,8 @@
 
 #action-icons-news {
     text-align: end;
+    padding-top: 30px;
+
 }
 #action-news {
     text-align: end;
@@ -354,6 +356,7 @@
 }
 #action-icons-subscriber {
     text-align: end;
+    padding-top: 0px;
 }
 #action-subscribe {
     text-align: end;
@@ -361,50 +364,50 @@
 
 @media screen and (max-width: 770px ) {
     #nav-Subscribe {
-        width: 101.5vw;
+        width: 100vw;
     }
     #title-Subscribe {
-        width: 97.5vw;
+        width: 96.5vw;
     }
   }
 @media screen and (max-width: 540px ) {
     #nav-Subscribe {
-        width: 132.5vw;
+        width: 122.5vw;
     }
     #title-Subscribe {
-        width: 126.5vw;
+        width: 117.5vw;
     }
   }
 @media screen and (max-width: 420px ) {
     #nav-Subscribe {
-        width: 166.5vw;
+        width: 158.5vw;
     }
     #title-Subscribe {
-        width: 159.5vw;
+        width: 151.5vw;
     }
   }
 @media screen and (max-width: 394px ) {
     #nav-Subscribe {
-        width: 175vw;
+        width: 169vw;
     }
     #title-Subscribe {
-        width: 168vw;
+        width: 162vw;
     }
   }
 @media screen and (max-width: 391px ) {
     #nav-Subscribe {
-        width: 176.5vw;
+        width: 170.5vw;
     }
     #title-Subscribe {
-        width: 168.5vw;
+        width: 163.5vw;
     }
   }
 @media screen and (max-width: 376px ) {
     #nav-Subscribe {
-        width: 180vw;
+        width: 171vw;
     }
     #title-Subscribe {
-        width: 172.5vw;
+        width: 163.5vw;
     }
     #table-Subscribe {
         margin-left: -14px;
@@ -412,10 +415,10 @@
   }
 @media screen and (max-width: 360px ) {
     #nav-Subscribe {
-        width: 187vw;
+        width: 179vw;
     }
     #title-Subscribe {
-        width: 177.5vw;
+        width: 169.5vw;
     }
     #table-Subscribe {
         margin-left: -14px;
@@ -423,10 +426,10 @@
   }
 @media screen and (max-width: 280px ) {
     #nav-Subscribe {
-        width: 240.5vw;
+        width: 230.5vw;
     }
     #title-Subscribe {
-        width: 228.5vw;
+        width: 218.5vw;
     }
   }
 

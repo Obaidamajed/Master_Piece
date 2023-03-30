@@ -83,7 +83,7 @@ function Year($value){
 }
 
 function Size($value){
-  if((strlen($value) >= 1 && strlen($value) < 3) or strlen($value) == 0) {
+  if((strlen($value) > 0 && strlen($value) < 3) or strlen($value) == 0) {
     return true;
   }
   return false;

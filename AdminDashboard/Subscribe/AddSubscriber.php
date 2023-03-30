@@ -41,25 +41,24 @@
         $Month = $_POST['Month'] ;
         $Year = $_POST['Year'] ;
         $Size = $_POST['Size'] ;
-        $message = santString($_POST['Message']) ;
 
         // Start 1st condition for submit fill required fields
         if(requiredInput($name) && requiredInput($number) && requiredInput($Day) && requiredInput($Month) && requiredInput($Year)) {
         // Start 2nd condition
-        if(minInput($name,3) && maxInput($number,10) && maxInput($message,250)) {
+        if(minInput($name,3) && maxInput($number,10)) {
             // Start 3rd condition 
             if(Day($Day) && Month($Month) && Year($Year)){
                 // Start 4th condition 
                 if(Size($Size)) {
 
                     // Start Create In DataBase
-                    $sql = "INSERT INTO `subscribe` (`Full_Name`, `Email`, `Phone`, `Day`, `Month`, `Year`, `Size`, `Message`) VALUES('$name' , '$email', '$number', '$Day', '$Month', '$Year', '$Size', '$message' ) "; // جملة الكويري 
+                    $sql = "INSERT INTO `subscribe` (`Full_Name`, `Email`, `Phone`, `Day`, `Month`, `Year`, `Size`) VALUES('$name' , '$email', '$number', '$Day', '$Month', '$Year', '$Size' ) "; 
                     $result = mysqli_query($conn, $sql); 
                     // End Create In DataBase
 
                     // Start Note Added Successfully
                     if ( $result ) {
-                        $success = "You are submited successfully" ;
+                        $success = "You are Added successfully" ;
                     }
                     // End Note Added Successfully
 
@@ -70,7 +69,8 @@
                 // End 4th condition 
             }
             else {
-                $error = "Please Enter Correct Date";
+                $error = "Please Enter Correct Birth";
+
             }
             // End 3rd condition 
         }
@@ -95,7 +95,7 @@
         
     <!-- Start For Correct Insert in DataBase  -->
     <?php if($success) : ?>
-        <h5 class="alert alert-success text-center">  <?php echo $success ;?> <strong>Please wait for the confirmation message that will be sent to your phone</strong>  </h5>
+        <h5 class="alert alert-success text-center">  <?php echo $success ;?> </h5>
     <?php endif; ?>
     <!-- End For Correct Insert in DataBase  -->
 
@@ -131,9 +131,6 @@
                 <input type="text" name="Size"  class="form-control" id="exampleInputName1" placeholder="Size: XS, S, M, L, XL" ></input>
             </div>
             <br>
-            <div class="form-group">
-                <textarea rows="5" cols="50" class="form-control" type="text" name="Message" placeholder="Message"></textarea><br><br>
-            </div>
 
             <button type="submit" class="btn" name="submit" style="background-color: #9c4b00; color:#010124">Submit</button>
         </form>

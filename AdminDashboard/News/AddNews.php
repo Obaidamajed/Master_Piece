@@ -37,14 +37,17 @@
         $description =    santString($_POST['description']) ;
 
         if(requiredInput($title) && requiredInput($description)) {
-            
+                
                     // save photo in products folder
-                        $main_pic= $_FILES['pic'];
-                        $filename = $_FILES["pic"]["name"];
-                        $filename=trim($filename);
-                        $tempname = $_FILES["pic"]["tmp_name"];
-                        $folder = "./News's_Image/" . $filename;
-                        move_uploaded_file($tempname, $folder);
+                    $main_pic= $_FILES['pic'];
+                    $filename = $_FILES["pic"]["name"];
+                    $filename=trim($filename);
+                    $tempname = $_FILES["pic"]["tmp_name"];
+                    $folder = "./News's_Image/" . $filename;
+                    move_uploaded_file($tempname, $folder);
+
+            if (strlen($filename) > 0){
+                if(maxInput($title,100) && maxInput($description,200)) {
 
                     // Start Create Coach In DataBase
                     $sql = "INSERT INTO `news` (`Photo`, `Main_title`, `Description`) VALUES('$filename' , '$title', '$description' ) "; // جملة الكويري 
@@ -58,6 +61,29 @@
                     }
                     // End Note Added Successfully
 
+                }else {
+                    $error = "Title Must be less than 100 Characters & Description Must be less than 200 Charachters";
+                }
+            } else {
+                if(maxInput($title,100) && maxInput($description,250)) {
+
+                    // Start Create Coach In DataBase
+                    $sql = "INSERT INTO `news` (`Photo`, `Main_title`, `Description`) VALUES('$filename' , '$title', '$description' ) "; // جملة الكويري 
+                    $result = mysqli_query($conn, $sql);
+                    // End Create Coach In DataBase
+
+                    // Start Note Added Successfully
+                    if ( $result ) {
+                        $success = "Added Successfully";
+                        header("refresh:3;url=News.php");
+                    }
+                    // End Note Added Successfully
+                }else {
+                    $error = "Title Must be less than 100 Characters & Description Must be less than 250 Charachters";
+                }
+            }
+                    
+                
         }
         else {
             $error = "Please Fill All Fields"; 

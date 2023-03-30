@@ -46,12 +46,8 @@
                 <input type="number" name="Year" value="<?php echo $row['Year'];?>"  class="form-control" id="exampleInputName1" ></input>
             </div>
             <div class="form-group">
-                <label for="exampleInputcategory1">Size</label>
-                <input type="text" name="Size" value="<?php echo $row['Size'] ?>"  class="form-control" id="exampleInputName1" ></input>
-            </div>
-            <div class="form-group">
-                <label for="exampleInputcategory1">Message</label>
-                <input type="text" name="Message" value="<?php echo $row['Message'] ?>"  class="form-control" id="exampleInputName1" ></input>
+                <label for="exampleInputcategory1">Size ( Options: XS, S, M, L, XL )</label>
+                <input type="text" name="Size" value="<?php echo $row['Size'] ?>"  class="form-control" id="exampleInputName1"></input>
             </div>
         
             <button type="submit" class="btn btn-primary" name="submit">Submit</button>

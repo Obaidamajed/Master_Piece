@@ -11,11 +11,10 @@
           $Month = $_POST['Month'] ;
           $Year = $_POST['Year'] ;
           $Size = $_POST['Size'] ;
-          $message = santString($_POST['Message']) ;
 
         if(requiredInput($fName) && requiredInput($phone) && requiredInput($Day) && requiredInput($Month) && requiredInput($Year)) {
              // Start 2nd condition
-             if(minInput($fName,3) && maxInput($phone,10) && maxInput($message,250)) {
+             if(minInput($fName,3) && maxInput($phone,10)) {
                 // Start 3rd condition 
                 if(Day($Day) && Month($Month) && Year($Year)){
                     // Start 4th condition 
@@ -25,7 +24,7 @@
 
                 $sql = "UPDATE `subscribe` SET `Full_Name`='$fName',
                  `Email`='$email', `Day`='$Day', `Month`='$Month',
-                  `Year`='$Year', `Size`='$Size', `Message`='$message'
+                  `Year`='$Year', `Size`='$Size'
                   WHERE `Id`='$id' ";
                 $result = mysqli_query($conn, $sql); 
               
@@ -41,7 +40,7 @@
                 // End 4th condition 
             }
             else {
-                $error = "Please Enter Correct Date";
+                $error = "Please Enter Correct Birth";
             }
             // End 3rd condition 
         }

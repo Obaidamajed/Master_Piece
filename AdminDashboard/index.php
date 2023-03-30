@@ -78,36 +78,30 @@
             <table id="table-home" class="table">
                 <thead>
                     <tr>
-                    <th style="width:35%" scope="col">Id </th>
+                    <th style="width:35%" scope="col">#</th>
                     <th style="width:35%" scope="col">Full_Name</th>
                     <th style="width:30%" scope="col">Email</th>
-                    <!-- <th scope="col">Edit</th>
-                    <th scope="col">Delete</th> -->
                     </tr>
                 </thead>
                 <tbody>
 
                 <?php if(mysqli_num_rows($result) > 0): ?> 
+                    <?php $num = 1; ?>
                     <!-- mysqli_num_rows($result), to check if database has data or not-->
                     <?php while($row = mysqli_fetch_assoc($result)): ?>
                     <!-- mysqli_fetch_assoc, this function receive data as an array-->
                     <!-- while, it do loop for all rows in database -->
                         <tr> <?php if($row["Is_Admin"] == 1) { ?>
-                                <td style="color: #9c4b00"> <b><?php echo $row['Id']; ?></b> </td>
+                                <td style="color: #9c4b00"> <b><?php echo $num; ?></b> </td>
                                 <td style="color: #9c4b00"> <b><?php echo $row['Full_Name']; ?></b> </td>
                                 <td style="color: #9c4b00"> <b><?php echo $row['Email']; ?></b></td>
                             <?php } else { ?>
-                                    <td><?php echo $row['Id']; ?></td>
+                                    <td><?php echo $num; ?></td>
                                     <td><?php echo $row['Full_Name']; ?></td>
                                     <td><?php echo $row['Email']; ?></td>
                             <?php } ?>
-                            <!-- <td>
-                                <a class="btn btn-info" href="edit.php?id=<?php echo $row['Id']; ?>"> <i class="fa fa-edit"></i> </a>
-                            </td>
-                            <td>
-                                <a class="btn btn-danger" href="delete.php?id=<?php echo $row['Id']; ?>"> <i class="fa fa-close"></i> </a>
-                            </td> -->
                         </tr>
+                        <?php ++$num; ?>
                     <?php endwhile; ?>
                 <?php endif; ?>
                 
