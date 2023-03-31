@@ -172,16 +172,16 @@
           <input class="inputs" type="text" name="pNumber" placeholder="Phone Number"><br><br>
 
           <p id="Date-of-birth">Date Of Birth</p>
-          <input type="number" name="Day" placeholder="Day" style="width: 25%;">
+          <input type="number" name="Day" placeholder="Day">
           /
-          <input type="number" name="Month" placeholder="Month" style="width: 25%;">
+          <input type="number" name="Month" placeholder="Month">
           /
-          <input type="number" name="Year" placeholder="Year" style="width: 25%;">
+          <input type="number" name="Year" placeholder="Year">
           <br><br>
 
-          <input type="text" name="Size" style="width: 80%; margin: 0 auto;" placeholder="Size">
+          <input class="inputs" type="text" name="Size"  placeholder="Size">
           <br><br>
-          <p style=" width: 90%; margin: 0 auto"><span style="color:red">Note ** </span><span style="color:#9c4b00"><b>Size Options</b></span>: XS (6-8 year), S(8-10year), M(10-12year), L(12-14), XL(14-16year).</p>
+          <p id="size-paragraph" style=" width: 90%; margin: 0 auto"><span style="color:red">Note ** </span><span style="color:#9c4b00"><b>Size Options</b></span>: XS (6-8 year), S(8-10year), M(10-12year), L(12-14), XL(14-16year).</p>
           <br>
 
           <p>Make sure you have the following: <span style="color: red;">*</span></p>
