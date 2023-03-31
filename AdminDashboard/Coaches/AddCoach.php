@@ -13,10 +13,10 @@
                     <a class="nav-link" href="Coaches.php">Coaches</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../News/News.php">News</a>
+                    <a class="nav-link" href="../Subscribe/Subscribe.php">Subscribe</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../Subscribe/Subscribe.php">Subscribe</a>
+                    <a class="nav-link" href="../News/News.php">News</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../Contact_Us/Contact_Us.php">Contact_Us</a>

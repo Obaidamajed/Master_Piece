@@ -15,7 +15,7 @@
                     <a class="nav-link" href="../Coaches/Coaches.php">Coaches</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../Subscribe/Subscribe.php">Subscribe</a>
+                    <a class="nav-link" href="../Subscribe/Subscribe.php">Subscribers</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../Contact_Us/Contact_Us.php">Contact_Us</a>
@@ -59,8 +59,8 @@
                             <td id="Main-title-news"><?php echo $row['Main_title']; ?></td>
                             <td id="descr-news"  ><?php echo $row['Description']; ?></td>
                             <td id="action-icons-news">
-                            <div id="edit-icon-news">Edit</div><a class="btn btn-info" href="editNews.php?id=<?php echo $row['Id']; ?>"> <i class="fa fa-edit"></i> </a><br><br>
-                            <div id="delete-icon-news">Delete</div><a class="btn btn-danger" href="deleteNews.php?id=<?php echo $row['Id']; ?>"> <i class="fa fa-close"></i> </a>
+                                <div id="edit-icon-news">Edit</div><a class="btn btn-info" href="editNews.php?id=<?php echo $row['Id']; ?>"> <i class="fa fa-edit"></i> </a><br><br>
+                                <div id="delete-icon-news">Delete</div><a class="btn btn-danger" href="deleteNews.php?id=<?php echo $row['Id']; ?>"> <i class="fa fa-close"></i> </a>
                             </td>
                         </tr>
                         <?php ++$num ?>

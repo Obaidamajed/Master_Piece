@@ -12,10 +12,10 @@
                     <a class="nav-link" href="../Coaches/Coaches.php">Coaches</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../News/News.php">News</a>
+                    <a class="nav-link" href="../Subscribe/Subscribe.php">Subscribers</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../Subscribe/Subscribe.php">Subscribers</a>
+                    <a class="nav-link" href="../News/News.php">News</a>
                 </li>
                 <li class="nav-item">
                     <a style="color: #9C4B00" class="nav-link" href="../../PublicDashboard/index.php">Public_Dashboard</a>

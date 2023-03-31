@@ -12,10 +12,10 @@
                     <a class="nav-link" href="AddCoach.php" id="Add" onmouseover="AddOver()" onmouseout="AddOut()">Add Coach</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../News/News.php">News</a>
+                    <a class="nav-link" href="../Subscribe/Subscribe.php">Subscribers</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../Subscribe/Subscribe.php">Subscribe</a>
+                    <a class="nav-link" href="../News/News.php">News</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../Contact_Us/Contact_Us.php">Contact_Us</a>

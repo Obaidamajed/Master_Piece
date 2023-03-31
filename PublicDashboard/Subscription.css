@@ -57,7 +57,7 @@ div ul{
 form{
   padding: 20px 0;
 }
-#subscribe input, #subscribe select{
+#subscribe input{
   border-radius: 5px;
   padding: 5px;
   border: none;
@@ -65,6 +65,15 @@ form{
 
 .inputs {
   width: 80%;
+}
+
+#Date-of-birth::after {
+  content: " *";
+  color: red;
+}
+#Personal-Information::after {
+  content: " *";
+  color: red;
 }
 
 .Make_Sure {
@@ -77,6 +86,10 @@ input[type="submit"]{
   background: #9C4B00;
   color: #fff;
   font-size: 20px;
+}
+
+input[name="fName"]::placeholder,input[name="pNumber"]::placeholder,input[type="number"]::placeholder {
+  color: red;
 }
 
 #footer{

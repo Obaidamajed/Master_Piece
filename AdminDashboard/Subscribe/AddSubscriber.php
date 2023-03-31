@@ -104,7 +104,7 @@
 
             <div class="form-group">
                 <label for="exampleInputName1" style="color:red">Required *</label>
-                <input type="text" name="fName"  class="form-control" id="exampleInputName1" placeholder="Full_Name"></input>
+                <input Required type="text" name="fName"  class="form-control" id="exampleInputName1" placeholder="Full_Name"></input>
             </div>
             <br>
             <div class="form-group">

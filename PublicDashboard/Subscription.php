@@ -11,11 +11,11 @@
     <!-- Css file for home page -->
     <link rel="stylesheet" href="Subscription.css">
     <style>
-    <?php
-    $css = file_get_contents('Subscription.css');
-    echo $css;
-    ?>
-  </style>
+      <?php
+      $css = file_get_contents('Subscription.css');
+      echo $css;
+      ?>
+    </style>
     <!-- Bootstrap files -->
     <link href="../CSS/bootstrap.css" rel="stylesheet">
     <link href="../CSS/bootstrap.min.css" rel="stylesheet">
@@ -113,34 +113,25 @@
             // End 2nd condition
           }
           else {
-              $error = "Please Fill All Fields required";
+              $error = "Please Fill All Fields Required";
           }
           // End 1st condition
       }
 
       ?>
 
-      <!-- Start For Error  -->
-      <?php if($error) : ?>
-          <h5 class="alert alert-danger text-center"><?php echo $error; ?></h5>
-      <?php endif; ?>
-      <!-- End For Error  -->
-          
-      <!-- Start For Correct Insert in DataBase  -->
-      <?php if($success) : ?>
-          <h5 class="alert alert-success text-center">  <?php echo $success ;?> <strong>Please wait for the confirmation message that will be sent to your phone</strong>  </h5>
-      <?php endif; ?>
-      <!-- End For Correct Insert in DataBase  -->
+
 
       <div id="subscribe">
 
-        <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        <form method="POST" id="subscriber-form" action="#subscriber-form">
 
-          <input class="inputs" type="text" name="fName" placeholder="Full Name *"><br><br>
+          <p id="Personal-Information">Personal Information</p>
+          <input class="inputs" type="text" name="fName" placeholder="Full Name"><br><br>
           <input class="inputs" type="email" name="Email" placeholder="Email"><br><br>
-          <input class="inputs" type="text" name="pNumber" placeholder="Phone Number *"><br><br>
+          <input class="inputs" type="text" name="pNumber" placeholder="Phone Number"><br><br>
 
-          <p>Date Of Birth <spans style="color: red;">*</span></p>
+          <p id="Date-of-birth">Date Of Birth</p>
           <input type="number" name="Day" placeholder="Day" style="width: 25%;">
           /
           <input type="number" name="Month" placeholder="Month" style="width: 25%;">
@@ -160,12 +151,25 @@
 
           <!-- <textarea rows="5" cols="50" style="width: 80%; margin: 0 auto" class="form-control" type="text" name="message" placeholder="Message"></textarea><br><br> -->
 
+            <!-- Start For Error  -->
+                <?php if($error) : ?>
+                    <h5 class="alert alert-danger text-center"><?php echo $error; ?></h5>
+                <?php endif; ?>
+                <!-- End For Error  -->
+                    
+                <!-- Start For Correct Insert in DataBase  -->
+                <?php if($success) : ?>
+                    <h5 class="alert alert-success text-center">  <?php echo $success ;?> <strong>Please wait for the confirmation message that will be sent to your phone</strong>  </h5>
+                <?php endif; ?>
+            <!-- End For Correct Insert in DataBase  -->
           <input type="submit" value="Submit" name="submit" placeholder="Submit"><br><br>
-          
+
           <p> * Registration means that you allow us
             to take photos for marketing purposes.</p>
 
         </form>
+
+        
 
       </div>
       <br>

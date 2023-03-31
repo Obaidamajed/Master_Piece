@@ -94,24 +94,14 @@ if(isset($_POST['submit'])){
       // End 2nd condition
     }
     else {
-        $error = "Please Fill All Fields required";
+        $error = "Please Fill All Fields Required";
     }
     // End 1st condition
 }
 
 ?>
 
-    <!-- Start For Error  -->
-    <?php if($error) : ?>
-      <h5 class="alert alert-danger text-center"><?php echo $error; ?></h5>
-    <?php endif; ?>
-    <!-- End For Error  -->
-      
-    <!-- Start For Correct Insert in DataBase  -->
-    <?php if($success) : ?>
-      <h5 class="alert alert-success text-center"> <?php echo $success ;?></h5>
-    <?php endif; ?>
-    <!-- End For Correct Insert in DataBase  -->
+
     <br><br>
     <div id="contact_us-core">
 
@@ -124,7 +114,7 @@ if(isset($_POST['submit'])){
       </div>
 
       <div id="right">
-        <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        <form method="POST" id="subscriber-form" action="#subscriber-form">
 
           <input type="text" name="fName" placeholder="Full name" id="firstName"><br>
           <input type="email" name="email" placeholder="Email" id="email"><br>
@@ -133,12 +123,24 @@ if(isset($_POST['submit'])){
 
           <input type="submit" name="submit" value="Submit"  id="submit" >
 
+          <!-- Start For Error  -->
+            <?php if($error) : ?>
+              <h5 class="alert alert-danger text-center"><?php echo $error; ?></h5>
+            <?php endif; ?>
+            <!-- End For Error  -->
+            
+            <!-- Start For Correct Insert in DataBase  -->
+            <?php if($success) : ?>
+              <h5 class="alert alert-success text-center"> <?php echo $success ;?></h5>
+            <?php endif; ?>
+          <!-- End For Correct Insert in DataBase  -->
         </form>
       </div>
 
 
     </div>
     <br><br>
+    
   </div>
 
   <!-- Footer  -->

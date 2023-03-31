@@ -154,6 +154,14 @@
 #table-news tbody tr #Main-title-news {
     min-width: 300px;
 }
+#table-news tbody tr td img:empty {
+    background-image: url(../img/empty.png);
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    background-size: contain; 
+    
+}
 
 #action-icons-news {
     text-align: end;
