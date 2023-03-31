@@ -66,6 +66,9 @@
 
       <?php
 
+      $Check_Successfuly = 0; 
+      $Check_UnSuccessfuly = 0; 
+
       if(isset($_POST['submit'])){ 
           $name =     santString($_POST['fName']) ; 
           $email =    santEmail($_POST['Email']) ;
@@ -80,32 +83,69 @@
           if(requiredInput($name) && requiredInput($number) && requiredInput($Day) && requiredInput($Month) && requiredInput($Year)) {
             // Start 2nd condition
             if(minInput($name,3) && maxInput($number,10)) {
-                // Start 3rd condition 
-                if(Day($Day) && Month($Month) && Year($Year)){
-                  // Start 4th condition 
-                  if(Size($Size)) {
+              // Start 3rd condition 
+              if(Day($Day) && Month($Month) && Year($Year)){
+                // Start 4th condition 
+                if(Size($Size)) {
+
+                  // Read From DataBase
+                  $sql = "SELECT * FROM `subscribe`";
+                  $result = mysqli_query($conn,$sql);
+
+                  // Start many conditions to prevent repeat email in database
+                  if(mysqli_num_rows($result) > 0){
+                            
+                      while($row = mysqli_fetch_assoc($result)){
+                          if($row["Phone"] !== $number) {
+
+                              $Check_Successfuly += 1;
+                              
+                          } else {
+                              $Check_UnSuccessfuly += 1;
+                          }
+                      }
+                      if($Check_UnSuccessfuly != 1){
+                          // Start Create In DataBase
+                            $sql = "INSERT INTO `subscribe` (`Full_Name`, `Email`, `Phone`, `Day`, `Month`, `Year`, `Size`) VALUES('$name' , '$email', '$number', '$Day', '$Month', '$Year', '$Size' ) "; 
+                            $result = mysqli_query($conn, $sql); 
+                          // End Create In DataBase
+
+                          // Start Note Added Successfully
+                            if ( $result ) {
+                                $success = "You are submited successfully" ;
+                            }
+                          // End Note Added Successfully
+                      } else {
+                          $error = "This Phone is Used, Please Enter Another Phone Number";
+                      }
+
+
+                  } else {
 
                       // Start Create In DataBase
-                      $sql = "INSERT INTO `subscribe` (`Full_Name`, `Email`, `Phone`, `Day`, `Month`, `Year`, `Size`) VALUES('$name' , '$email', '$number', '$Day', '$Month', '$Year', '$Size' ) "; 
-                      $result = mysqli_query($conn, $sql); 
+                        $sql = "INSERT INTO `subscribe` (`Full_Name`, `Email`, `Phone`, `Day`, `Month`, `Year`, `Size`) VALUES('$name' , '$email', '$number', '$Day', '$Month', '$Year', '$Size' ) "; 
+                        $result = mysqli_query($conn, $sql); 
                       // End Create In DataBase
 
                       // Start Note Added Successfully
-                      if ( $result ) {
-                          $success = "You are submited successfully" ;
-                      }
+                        if ( $result ) {
+                            $success = "You are submited successfully" ;
+                        }
                       // End Note Added Successfully
 
                   }
-                  else {
-                    $error = "Please Enter Correct Size";
-                  }
-                  // End 4th condition 
+                 // End many conditions to prevent repeat email in database
+
                 }
                 else {
-                  $error = "Please Enter Correct Date";
+                  $error = "Please Enter Correct Size";
                 }
-                // End 3rd condition 
+                // End 4th condition 
+              }
+              else {
+                $error = "Please Enter Correct Date";
+              }
+              // End 3rd condition 
             }
             else {
                 $error = "Name Must Be Greate Than 3 Characters & Phone number Must Be Less Than 11 Characters";
@@ -159,7 +199,7 @@
                     
                 <!-- Start For Correct Insert in DataBase  -->
                 <?php if($success) : ?>
-                    <h5 class="alert alert-success text-center">  <?php echo $success ;?> <strong>Please wait for the confirmation message that will be sent to your phone</strong>  </h5>
+                    <h5 class="alert alert-success text-center">  <?php echo $success ;?> <strong>You Will Receive a confirmation message that will be sent to your phone</strong>  </h5>
                 <?php endif; ?>
             <!-- End For Correct Insert in DataBase  -->
           <input type="submit" value="Submit" name="submit" placeholder="Submit"><br><br>

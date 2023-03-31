@@ -12,7 +12,7 @@
         <style>
             <?php
             $css = file_get_contents('../../css/style.css');
-            echo $css; // if remove comment on echo $css, it will occur error
+            // echo $css; // if remove comment on echo $css, it will occur error
             ?>
         </style>
         <!-- Fontawesome  -->
