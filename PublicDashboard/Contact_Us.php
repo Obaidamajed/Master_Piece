@@ -119,7 +119,8 @@ if(isset($_POST['submit'])){
           <input type="text" name="fName" placeholder="Full name" id="firstName"><br>
           <input type="email" name="email" placeholder="Email" id="email"><br>
           <input type="text" name="pNumber" placeholder="Phone Number" id="phoneNumber"><br>
-          <input type="text" name="Message" placeholder="Message" id="message"><br>
+          <!-- <div id="counter"><span id="inc_dec">0 </span> <span>/ 250</span></div>  -->
+          <textarea type="text" name="Message" placeholder="Message" id="message"></textarea><br>
 
           <input type="submit" name="submit" value="Submit"  id="submit" >
 
@@ -162,6 +163,7 @@ if(isset($_POST['submit'])){
 
 
   <script src="../JS/bootstrap.bundle.min.js"></script>
+  <!-- <script src="../JS/index.js"></script> -->
 
   </body>
   </html>

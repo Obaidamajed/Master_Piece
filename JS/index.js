@@ -25,4 +25,27 @@ function AddOut() {
 
 }
 
+// Contact Us PublicDashboard 
+
+// let message = document.getElementById('message');
+// let counterr = document.getElementById('counter');
+// let inc_dec = document.getElementById('inc_dec');
+// let num = -1;
+
+// // console.log(counterr.innerHTML);
+
+// function counter() {
+  
+//   if (message.value.length > num){
+//     inc_dec.innerHTML++
+//     num++
+//   } 
+ 
+//   else if(message.value.length < num) {
+//     inc_dec.innerHTML--
+//     num--
+//   }
+  
+// }
+
 

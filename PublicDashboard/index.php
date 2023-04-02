@@ -1,3 +1,4 @@
+<?php include('../AdminDashboard/Includes/db.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -127,19 +128,30 @@
             </p>
           <br><br>
           <div class="paragraph">
+
+            <?php  
+              // Read From DataBase
+              $sql = "SELECT * FROM `schedule` ";
+              $result = mysqli_query($conn,$sql); 
+            ?>
+
+            <?php if(mysqli_num_rows($result) > 0): ?> 
+              <?php while($row = mysqli_fetch_assoc($result)): ?>  
             <br>
             <!-- Date of Excersises  -->
             <h4>The schedules for the Academy's exercises are:</h4><br>
               <table id="table1">
                 <tr>
-                  <th>Sunday</th><th>Tuesday</th><th>Thursday</th>
+                  <th><?php echo $row['1st_Day']; ?></th><th><?php echo $row['2nd_Day']; ?></th><th><?php echo $row['3rd_Day']; ?></th>
                 </tr>
               </table>
               <table id="table2" >
                 <tr>
-                  <th>17:00-18:00</th><th>17:00-18:00</th><th>17:00-18:00</th>
+                  <th><?php echo $row['1st_Time']; ?></th><th><?php echo $row['2nd_Time']; ?></th><th><?php echo $row['3rd_Time']; ?></th>
                 </tr>
               </table>
+              <?php endwhile; ?>
+            <?php endif; ?>
             <br>
           </div>
           <br>

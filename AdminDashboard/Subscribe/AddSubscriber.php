@@ -22,6 +22,9 @@
                     <a class="nav-link" href="../Contact_Us/Contact_Us.php">Contact_Us</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="../Schedule/Schedule.php">Schedule</a>
+                </li>
+                <li class="nav-item">
                     <a style="color: #9C4B00" class="nav-link" href="../../PublicDashboard/index.php">Public_Dashboard</a>
                 </li>
             

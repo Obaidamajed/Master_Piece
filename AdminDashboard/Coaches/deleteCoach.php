@@ -17,7 +17,7 @@
 
     ?>
 
-    <h1 class="text-center col-12 bg-danger py-3 text-white my-2">Coach Have Been Deleted</h1>
+    <h1 class="text-center col-12 bg-danger py-3 text-white my-2">THe Coach Has Been Deleted</h1>
 
     <?php header("refresh:3;url=Coaches.php"); ?>
 

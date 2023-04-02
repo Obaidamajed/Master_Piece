@@ -18,6 +18,9 @@
                     <a class="nav-link" href="../News/News.php">News</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="../Schedule/Schedule.php">Schedule</a>
+                </li>
+                <li class="nav-item">
                     <a style="color: #9C4B00" class="nav-link" href="../../PublicDashboard/index.php">Public_Dashboard</a>
                 </li>
             
@@ -43,6 +46,7 @@
                         <th scope="col">Email</th>
                         <th scope="col">Phone</th>
                         <th id="message-contact" scope="col">Message</th>
+                        <th scope="col">Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -55,7 +59,10 @@
                                 <td><?php echo $row['Full_Name']; ?></td>
                                 <td><?php echo $row['Email']; ?></td>
                                 <td><?php echo $row['Phone']; ?></td>
-                                <td style="max-width:300px;"><?php echo $row['Message']; ?></td>
+                                <td style="min-width:200px;"><?php echo $row['Message']; ?></td>
+                                <td>
+                                <div id="delete-icon-contact_us">Delete</div><a class="btn btn-danger" href="deleteContact_Us.php?id=<?php echo $row['Id']; ?>"> <i class="fa fa-close"></i> </a>
+                                </td>
                             </tr>
                             <?php ++$num ?>
                         <?php endwhile; ?>

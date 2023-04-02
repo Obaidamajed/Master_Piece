@@ -160,7 +160,6 @@
     height: 200px;
     background-position: center;
     background-size: contain; 
-    
 }
 
 #action-icons-news {
@@ -177,12 +176,13 @@
 #delete-icon-news {
     margin-right: -3px;
 }
+
 @media screen and (max-width: 1200px ) {
     #nav-news {
         width: 100vw;
     }
     #title-news {
-        width: 97.3vw;
+        width: 97vw;
     }
   }
 @media screen and (max-width: 920px ) {
@@ -220,10 +220,10 @@
   }
 @media screen and (max-width: 540px ) {
     #nav-news {
-        width: 173.5vw;
+        width: 175.5vw;
     }
     #title-news {
-        width: 167.5vw;
+        width: 169.5vw;
     }
   }
 @media screen and (max-width: 440px ) {
@@ -268,10 +268,10 @@
   }
 @media screen and (max-width: 281px ) {
     #nav-news {
-        width: 333.5vw;
+        width: 334.5vw;
     }
     #title-news {
-        width: 323vw;
+        width: 323.5vw;
     }
   }
 
@@ -287,23 +287,51 @@
     padding: 15px;
     text-align: center;
 }
-@media screen and (max-width: 420px ) {
+#delete-icon-contact_us {
+     margin-left: -3px;
+    
+}
+
+@media screen and (max-width: 540px ) {
     #nav-Contact {
-        width: 124.5vw;
+        width: 127vw;
     }
     #title-Contact {
-        width: 117.5vw;
+        width: 121vw;
     }
     #table-Contact {
-        margin-left: -9px;
+        margin-left: -11px;
+    } 
+  }
+
+@media screen and (max-width: 420px ) {
+    #nav-Contact {
+        width: 165vw;
+    }
+    #title-Contact {
+        width: 157.5vw;
+    }
+    #table-Contact {
+        margin-left: -13px;
     } 
   }
 @media screen and (max-width: 394px ) {
     #nav-Contact {
-        width: 129.5vw;
+        width: 173vw;
     }
     #title-Contact {
-        width: 121.5vw;
+        width: 165.5vw;
+    }
+    #table-Contact {
+        margin-left: -11px;
+    } 
+  }
+  @media screen and (max-width: 391px ) {
+    #nav-Contact {
+        width: 175vw;
+    }
+    #title-Contact {
+        width: 167.5vw;
     }
     #table-Contact {
         margin-left: -11px;
@@ -311,10 +339,10 @@
   }
 @media screen and (max-width: 376px ) {
     #nav-Contact {
-        width: 135vw;
+        width: 182vw;
     }
     #title-Contact {
-        width: 127.5vw;
+        width: 173vw;
     }
     #table-Contact {
         margin-left: -13px;
@@ -322,10 +350,10 @@
   }
 @media screen and (max-width: 360px ) {
     #nav-Contact {
-        width: 139.5vw;
+        width: 188vw;
     }
     #title-Contact {
-        width: 131vw;
+        width: 179.5vw;
     }
     #table-Contact {
         margin-left: -15px;
@@ -334,10 +362,10 @@
 
 @media screen and (max-width: 280px ) {
     #nav-Contact {
-        width: 179.5vw;
+        width: 242vw;
     }
     #title-Contact {
-        width: 168.5vw;
+        width: 232vw;
     }
     #table-Contact {
         margin-left: -15px;
@@ -441,3 +469,33 @@
     }
   }
 
+  /* Schedule.php  */
+
+#nav-Schedule {
+    background-color: #010124;
+}
+#title-Schedule {
+    background-color: #010124;
+    color: #fff;
+    margin-top: 10px;
+    padding: 15px;
+    text-align: center;
+}
+#edit-icon-Schedule {
+    margin-right: 10px;
+    margin-top: -13px;
+}
+#action-icons-Schedule {
+    text-align: end;
+}
+#action-Schedule {
+    text-align: end;
+}
+@media screen and (max-width: 380px ) {
+    #nav-Schedule {
+        width: 126vw;
+    }
+    #title-Schedule {
+        width: 115.5vw;
+    }
+  }
