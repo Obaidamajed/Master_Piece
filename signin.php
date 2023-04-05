@@ -26,10 +26,10 @@
 <body>
     <div class="container-fluid position-relative d-flex p-0">
         <!-- Spinner Start -->
-        <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <!-- <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border" style="width: 3rem; height: 3rem; color: #9c4b00" role="status">
             </div>
-        </div>
+        </div> -->
         <!-- Spinner End -->
 
 
@@ -139,7 +139,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     
     <!-- Template Javascript -->
-    <script src="AdminDashboard/js/main.js"></script>
+    <!-- <script src="AdminDashboard/js/main.js"></script> -->
     <script src="JS/index.js"></script>
 
 </body>

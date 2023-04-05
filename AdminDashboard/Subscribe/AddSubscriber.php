@@ -62,6 +62,7 @@
                     // Start Note Added Successfully
                     if ( $result ) {
                         $success = "You are Added successfully" ;
+                        header("refresh:3;url=Subscribe.php");
                     }
                     // End Note Added Successfully
 
