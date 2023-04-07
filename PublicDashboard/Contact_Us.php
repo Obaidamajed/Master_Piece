@@ -75,7 +75,7 @@ if(isset($_POST['submit'])){
     // Start 1st condition for submit fill required fields
     if(requiredInput($name) && requiredInput($number) && requiredInput($message)) {
       // Start 2nd condition
-      if(minInput($name,3) && maxInput($number,10) && maxInput($message,250)) {
+      if(minInput($name,3) && maxInput($number,10) && maxInput($message,150)) {
 
                 // Start Create In DataBase
                 $sql = "INSERT INTO `contact_us` (`Full_Name`, `Email`, `Phone`, `Message`) VALUES('$name' , '$email', '$number','$message')"; 
@@ -89,7 +89,7 @@ if(isset($_POST['submit'])){
                 // End Note Added Successfully
       }
       else {
-          $error = "Name Must Be Greate Than 3 Characters, Phone Must Be Less Than 11 Characters & Message Must Be Less Than 251 Characters";
+          $error = "Name Must Be Greate Than 3 Characters, Phone Must Be Less Than 11 Characters & Message Must Be Less Than 151 Characters";
       }
       // End 2nd condition
     }
@@ -109,7 +109,8 @@ if(isset($_POST['submit'])){
       <div id="left">
         <p id="connect_with_us"><b>Connect with us</b></p>
         <p class="Connect-left"><img width="30px"height="30px" src="images/Contact-Us/house-icon.png" alt="Our-city">&nbsp; Aqaba</p>
-        <p class="Connect-left"><img width="38px"height="38px" src="images/Contact-Us/location icon.png" alt="Our-location"> Future Academy in Aqaba</p>
+        <p class="Connect-left"><a href="https://www.google.com/maps/place/%D9%85%D9%84%D8%B9%D8%A8+%D8%A7%D9%84%D8%B9%D9%82%D8%A8%D8%A9%E2%80%AD/@29.548203,35.0081126,17z/data=!3m1!4b1!4m6!3m5!1s0x15007028001e7c37:0x4d6f7153cf9e41bd!8m2!3d29.548203!4d35.0059239!16s%2Fg%2F11gdlykkpj?authuser=0" target="_blank">
+          <img width="38px"height="38px" src="images/Contact-Us/location icon.png" alt="Our-location"></a>  Future Academy in Aqaba</p>
         <p class="Connect-left"><img width="30px"height="30px" src="images/Contact-Us/message-icon.png" alt="Our-email"> FutureAcademy@gmail.com</p>
       </div>
 
@@ -118,8 +119,8 @@ if(isset($_POST['submit'])){
 
           <input type="text" name="fName" placeholder="Full name" id="firstName"><br>
           <input type="email" name="email" placeholder="Email" id="email"><br>
-          <input type="text" name="pNumber" placeholder="Phone Number" id="phoneNumber"><br>
-          <!-- <div id="counter"><span id="inc_dec">0 </span> <span>/ 250</span></div>  -->
+          <input type="text" name="pNumber" placeholder="Phone Number" id="phoneNumber"><br><br>
+          <div id="counter"><span id="inc_dec">0 </span> <span id="charachter">Character</span> </div> 
           <textarea type="text" name="Message" placeholder="Message" id="message"></textarea><br>
 
           <input type="submit" name="submit" value="Submit"  id="submit" >
@@ -163,7 +164,7 @@ if(isset($_POST['submit'])){
 
 
   <script src="../JS/bootstrap.bundle.min.js"></script>
-  <!-- <script src="../JS/index.js"></script> -->
+  <script src="../JS/index.js"></script>
 
   </body>
   </html>

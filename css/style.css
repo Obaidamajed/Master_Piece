@@ -176,6 +176,15 @@
 #delete-icon-news {
     margin-right: -3px;
 }
+/* Add News  */
+#AddNews_form {
+    position: relative;
+}
+#counter {
+    position: absolute;
+    right: 1em;
+    top: 6.75em;
+}
 
 @media screen and (max-width: 1200px ) {
     #nav-news {

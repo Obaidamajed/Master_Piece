@@ -82,8 +82,8 @@
                 <thead>
                     <tr>
                     <th style="width:35%" scope="col">#</th>
-                    <th style="width:35%" scope="col">Full_Name</th>
                     <th style="width:30%" scope="col">Email</th>
+                    <th style="width:35%" scope="col">Password</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -96,8 +96,8 @@
                     <!-- while, it do loop for all rows in database -->
                         <tr> <?php if($row["Is_Admin"] == 1) { ?>
                                 <td style="color: #9c4b00"> <b><?php echo $num; ?></b> </td>
-                                <td style="color: #9c4b00"> <b><?php echo $row['Full_Name']; ?></b> </td>
                                 <td style="color: #9c4b00"> <b><?php echo $row['Email']; ?></b></td>
+                                <td style="color: #9c4b00"> <b><?php echo $row['Password']; ?></b> </td>
                             <?php } else { ?>
                                     <td><?php echo $num; ?></td>
                                     <td><?php echo $row['Full_Name']; ?></td>

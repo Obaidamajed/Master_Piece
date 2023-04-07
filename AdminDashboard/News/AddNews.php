@@ -108,7 +108,7 @@
     <!-- End For Correct Insert in DataBase  -->
 
     <div class="col-md-6 offset-md-3">
-        <form class="my-2 p-3 border bg-light" method="POST" enctype="multipart/form-data" action="<?php echo $_SERVER['PHP_SELF']; ?>"> 
+        <form id="AddNews_form" class="my-2 p-3 border bg-light" method="POST" enctype="multipart/form-data" action="<?php echo $_SERVER['PHP_SELF']; ?>"> 
             <div class="form-group">
                 <label for="exampleInputImage1">Image</label>
                 <input type="file" name="pic" class="form-control" id="exampleInputImage1">
@@ -116,12 +116,13 @@
 
             <div class="form-group">
                 <label for="exampleInputName1">Main_title</label>
-                <textarea rows="10" cols="50" type="text" name="title" class="form-control" id="exampleInputName1" ></textarea>
+                <!-- <span id="counter"><span id="inc_dec">0 </span> <span id="charachter">Character</span> </span>  -->
+                <textarea rows="10" cols="50" type="text" name="title" class="form-control" id="textarea1" ></textarea>
             </div>
 
             <div class="form-group">
                 <label for="exampleInputName1">Description</label>
-                <textarea rows="10" cols="50" type="text" name="description" class="form-control" id="exampleInputName1" ></textarea>
+                <textarea rows="10" cols="50" type="text" name="description" class="form-control" id="textarea2" ></textarea>
             </div>
 
             <button type="submit" class="btn" name="submit" style="background-color: #9c4b00; color:#010124">Submit</button>

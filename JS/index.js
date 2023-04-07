@@ -27,25 +27,39 @@ function AddOut() {
 
 // Contact Us PublicDashboard 
 
-// let message = document.getElementById('message');
-// let counterr = document.getElementById('counter');
-// let inc_dec = document.getElementById('inc_dec');
-// let num = -1;
+const message = document.querySelector("#message");
+const inc_dec = document.querySelector("#inc_dec");
+const charachter = document.getElementById("charachter");
 
-// // console.log(counterr.innerHTML);
+const countCharachters = (str) => {
+  return str.trim().length;
+}
 
-// function counter() {
-  
-//   if (message.value.length > num){
-//     inc_dec.innerHTML++
-//     num++
-//   } 
- 
-//   else if(message.value.length < num) {
-//     inc_dec.innerHTML--
-//     num--
-//   }
-  
+message.addEventListener("input", () => {
+    inc_dec.innerHTML = countCharachters(message.value);
+    if (message.value.length > 1) {
+      charachter.innerHTML = "Characters";
+    } else {
+      charachter.innerHTML = "Character"
+    }
+})
+
+// Add News AdminDashboard 
+
+// const textarea1 = document.querySelector("#textarea1");
+// const inc_dec_Add_News = document.querySelector("#inc_dec");
+// const charachter_Add_News = document.getElementById("charachter");
+
+// const countCharachtersAddNews = (str) => {
+//   return str.trim().length;
 // }
 
+// textarea1.addEventListener("input", () => {
+//   inc_dec_Add_News.innerHTML = countCharachtersAddNews(textarea1.value);
+//     if (textarea1.value.length > 1) {
+//       charachter_Add_News.innerHTML = "Characters";
+//     } else {
+//       charachter_Add_News.innerHTML = "Character"
+//     }
+// })
 
